@@ -1,22 +1,59 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import axios from 'axios';
+import { Context } from '../../context/Context';
 import './write.css'
 
 const Write = () => {
+    const [title, setTitle] = useState('');
+    const [desc, setDesc] = useState('');
+    const [file, setFile] = useState(null);
+    const {user}=useContext(Context);
+    const handleSubmit =async (e) => {
+        e.preventDefault();
+        const newPost = {
+            title,
+            desc,
+            username: user.username,
+        };
+        console.log(newPost);
+        if (file) {
+            const formData = new FormData();
+            const filename = Date.now() + file.name;
+            formData.append('name', filename);
+            formData.append('file', file);
+            newPost.photo = filename;
+            try {
+                await axios.post('http://localhost:5000/api/upload', formData);
+             } catch (error) {
+                
+            }
+        }
+        console.log(newPost);
+        try {
+            const res = await axios.post('http://localhost:5000/api/posts', newPost);
+            window.location.replace('/post/' + res.data._id);
+            
+        } catch (error) {
+            
+        }
+        
+    }
     return <div className='write'>
-        <img className='writeImg' src="https://th.bing.com/th/id/R.5be9f1b1662308e3eb08f4be0823c2d3?rik=5chxrOybiZYj4w&riu=http%3a%2f%2fhdwpro.com%2fwp-content%2fuploads%2f2016%2f03%2fBeautiful-Scenery-Wallpaper-1229x768.jpg&ehk=JyNqHIEZdmUL5xhzHM%2fKU%2fcA%2bMmJU7Fj3GdWX%2f1LN6Y%3d&risl=&pid=ImgRaw&r=0" alt="" />
-        <form className='writeForm'>
+       { console.log(file)}
+        {file&&<img  className='writeImg' src={URL.createObjectURL(file)} alt='img'/>}
+             <form className='writeForm' onSubmit={handleSubmit}>
             <div className="writeFormGroup">
                 <label htmlFor="fileInput">
                 <i className="writeIcon fas fa-folder-plus"></i>
                 </label>
-                <input type="file" id='fileInput' style={{display:'none'}} />
-                <input type="text" placeholder='title' className='writeInput' autoFocus={ true}/>
+                <input type="file" id='fileInput' style={{display:'none'}} onChange={(e) => setFile(e.target.files[0])} />
+                <input type="text" placeholder='title' className='writeInput' autoFocus={ true} onChange={e=>setTitle(e.target.value)}/>
             </div>
             <div className="writeFormGroup">
-                <textarea placeholder='Tell Your Story.....' type="text" className='writeInput writeText'></textarea>
+                <textarea placeholder='Tell Your Story.....' type="text" className='writeInput writeText' onChange={e=>setDesc(e.target.value)}></textarea>
             </div>
-            <button className="writeSubmit">Publish</button>
-      </form>
+            <button className="writeSubmit" type='submit'>Publish</button>
+            </form>
   </div>;
 };
 

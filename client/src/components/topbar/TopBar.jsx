@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { Context } from '../../context/Context';
 import './TopBar.css'
 
 const TopBar = () => {
-    const user=false;
+    const { user,dispatch } = useContext(Context);
+    const handleLogout = () => {
+        dispatch({ type: "LOGOUT" });
+    };
+        
     return <div className='top'>
         <div className='topLeft'>
             <i className="topIcon fab fa-facebook"></i>
@@ -19,11 +24,11 @@ const TopBar = () => {
                 <li className='topListItem'><Link to='/' className='link'>About</Link></li>
                 <li className='topListItem'><Link to='/' className='link'>Contact</Link></li>
                 <li className='topListItem'><Link to='/write' className='link'>Write</Link></li>
-                <li className='topListItem'><Link to='/' className='link'>{user&&"Logout" }</Link></li>
+                <li className='topListItem'><Link to='/' className='link' onClick={handleLogout}>{user&&"Logout" }</Link></li>
             </ul>
         </div>
         <div className='topRight'>
-            {user ? <img className='topImg' src="https://usercontent1.hubstatic.com/13306390_f520.jpg" alt="" /> : (<>
+            {user ?<Link to="/settings"> <img className='topImg' src={user.profilePic} alt="" /></Link> : (<>
                 <ul className='topList'>
                     <li className='topListItem'><Link to='/login' className='link'>Login</Link></li>
                     <li className='topListItem'><Link to='/register' className='link'>register</Link></li>
