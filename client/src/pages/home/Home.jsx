@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Posts from '../../components/posts/Posts';
-import SideBar from '../../components/sidebar/SideBar';
+// import SideBar from '../../components/sidebar/SideBar';
 // import Header from '../../components/topbar/header/Header';
 import AlgodersHome from '../../components/algoders/AlgodersHome';
 
@@ -28,7 +28,7 @@ const Home = () => {
         <AlgodersHome />
         <div className='home'>
             <Posts posts={posts}/>
-            <SideBar/>
+            {/* <SideBar/> */}
           </div>
        </>;
 };
