@@ -4,6 +4,8 @@ import { Context } from '../../context/Context';
 import './TopBar.css'
 
 const TopBar = () => {
+    const PF = 'http://localhost:5000/images/';
+    console.log(PF);
     const { user,dispatch } = useContext(Context);
     const handleLogout = () => {
         dispatch({ type: "LOGOUT" });
@@ -28,7 +30,7 @@ const TopBar = () => {
             </ul>
         </div>
         <div className='topRight'>
-            {user ?<Link to="/settings"> <img className='topImg' src={user.profilePic} alt="" /></Link> : (<>
+            {user ? <Link to="/settings">{user.profilePic?<img className='topImg' src={PF + user.profilePic} alt="" />:<img className='topImg' src="https://th.bing.com/th/id/OIP.MLqa_eaUsAEh0ah2feV2swAAAA?w=149&h=169&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="" /> }</Link> : (<>
                 <ul className='topList'>
                     <li className='topListItem'><Link to='/login' className='link'>Login</Link></li>
                     <li className='topListItem'><Link to='/register' className='link'>register</Link></li>

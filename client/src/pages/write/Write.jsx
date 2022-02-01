@@ -7,12 +7,14 @@ const Write = () => {
     const [title, setTitle] = useState('');
     const [desc, setDesc] = useState('');
     const [file, setFile] = useState(null);
+    const [cat, setCat] = useState('');
     const {user}=useContext(Context);
     const handleSubmit =async (e) => {
         e.preventDefault();
         const newPost = {
             title,
             desc,
+            categories: cat,
             username: user.username,
         };
         console.log(newPost);
@@ -50,7 +52,16 @@ const Write = () => {
                 <input type="text" placeholder='title' className='writeInput' autoFocus={ true} onChange={e=>setTitle(e.target.value)}/>
             </div>
             <div className="writeFormGroup">
-                <textarea placeholder='Tell Your Story.....' type="text" className='writeInput writeText' onChange={e=>setDesc(e.target.value)}></textarea>
+                <textarea placeholder='Tell Your Story.....' type="text" rows="2" cols='2' className='writeInput writeText' onChange={e=>setDesc(e.target.value)}></textarea>
+            </div>
+            <div className="writeFormGroup">
+            <label>Select Category</label> 
+                <select onChange={(e)=>setCat(e.target.value)} >
+                <option value='CPP'>CPP</option>
+                <option value="WEB DEV" >WEB DEV</option>
+                <option value="PYTHON" >PYTHON</option>
+                <option value="C">C</option>
+            </select>
             </div>
             <button className="writeSubmit" type='submit'>Publish</button>
             </form>

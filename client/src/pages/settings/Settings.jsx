@@ -51,20 +51,20 @@ const Setting = () => {
       <form className="settingsForm" onSubmit={handleSubmit}>
         <label >Profile Picture</label>
         <div className="settingsPP">
-
-        <img
+        {user.profilePic?<img className='settingsPPImg' src={PF + user.profilePic} alt="" />:<img className='settingsPPImg' src="https://th.bing.com/th/id/OIP.MLqa_eaUsAEh0ah2feV2swAAAA?w=149&h=169&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="" /> }
+        {/* <img
               src={file ? URL.createObjectURL(file) : PF+user.profilePic}
               alt=""
-            />
+            /> */}
           <label htmlFor="fileInput">
             <i className="settingsPPIcon far fa-user-circle"></i>
           </label>
-          <input type="file" id='fileInput' style={{display:"none"}} onChange={(e) => setFile(e.target.files[0])} />
+          <input type="file" id='fileInput' style={{display:"none"}} required onChange={(e) => setFile(e.target.files[0])} />
         </div>
         <label >Useraname</label>
-        <input type="text" placeholder={user.username} onChange={(e) => setUsername(e.target.value)} />
+        <input type="text" placeholder={user.username}required onChange={(e) => setUsername(e.target.value)} />
         <label >Email</label>
-        <input type="text" placeholder={user.email} onChange={(e) => setEmail(e.target.value)} />
+        <input type="text" placeholder={user.email} required onChange={(e) => setEmail(e.target.value)} />
         <label >Password</label>
         <input type="password"  onChange={(e) => setPassword(e.target.value)}/>
         <button className="settingsSubmitButton" type="submit">Update</button>
