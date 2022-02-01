@@ -20,6 +20,10 @@ const UserSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
+    role: {
+      type: String,
+      default: "student",
+    }
   },
   { timestamps: true }
 );

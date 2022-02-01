@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Posts from '../../components/posts/Posts';
 import SideBar from '../../components/sidebar/SideBar';
-import Header from '../../components/topbar/header/Header';
+// import Header from '../../components/topbar/header/Header';
+import AlgodersHome from '../../components/algoders/AlgodersHome';
 
 import './Home.css';
 import { useEffect } from 'react';
@@ -23,7 +24,8 @@ const Home = () => {
     },[search]);
    
     return <>
-        <Header />
+        {/* <Header /> */}
+        <AlgodersHome />
         <div className='home'>
             <Posts posts={posts}/>
             <SideBar/>

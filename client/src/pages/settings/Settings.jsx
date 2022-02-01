@@ -1,6 +1,7 @@
 import React from 'react';
 import { useContext,useState } from 'react';
 import SideBar from '../../components/sidebar/SideBar';
+import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import axios from 'axios';
 import './Settings.css';
@@ -12,7 +13,10 @@ const Setting = () => {
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState(false);
 
-  const { user, dispatch } = useContext(Context);
+ const { user,dispatch } = useContext(Context);
+  const handleLogout = () => {
+      dispatch({ type: "LOGOUT" });
+  };
   const PF = "http://localhost:5000/images/"
 
   const handleSubmit = async (e) => {
@@ -76,6 +80,7 @@ const Setting = () => {
             </span>
           )}
       </form>
+      <li className='topListItem'><Link to='/' className='link' onClick={handleLogout}>{user&&"Logout" }</Link></li>
      </div>
     <SideBar/>
   </div>;

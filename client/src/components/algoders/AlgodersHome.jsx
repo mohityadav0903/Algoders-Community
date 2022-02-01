@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home.css';
+import './AlgodersHome.css';
 export default function Home() {
     return (
         <div>
@@ -20,7 +20,7 @@ export default function Home() {
   </div>
 </div>
 </section>
-<div id="footer" className="footer-top">
+{/* <div id="footer" className="footer-top">
 <div className="footer-top">
       <div class="container">
         <div class="row">
@@ -64,8 +64,8 @@ export default function Home() {
       <div className="copyright">
         &copy; Copyright <strong><span>ALGODERS</span></strong>. All Rights Reserved
       </div>
-      </div>
-    </div>
+      </div> */}
+    {/* </div> */}
         </div>
     )
 }

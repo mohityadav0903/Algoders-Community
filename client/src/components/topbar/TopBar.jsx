@@ -7,10 +7,10 @@ const TopBar = () => {
     const PF = 'http://localhost:5000/images/';
     console.log(PF);
     const { user,dispatch } = useContext(Context);
-    const handleLogout = () => {
-        dispatch({ type: "LOGOUT" });
-    };
-        
+    // const handleLogout = () => {
+    //     dispatch({ type: "LOGOUT" });
+    // };
+    
     return <div className='top'>
         <div className='topLeft'>
             <i className="topIcon fab fa-facebook"></i>
@@ -25,8 +25,9 @@ const TopBar = () => {
                 </li>
                 <li className='topListItem'><Link to='/' className='link'>About</Link></li>
                 <li className='topListItem'><Link to='/' className='link'>Contact</Link></li>
-                <li className='topListItem'><Link to='/write' className='link'>Write</Link></li>
-                <li className='topListItem'><Link to='/' className='link' onClick={handleLogout}>{user&&"Logout" }</Link></li>
+                {console.log(user)}
+                {user && user.role=="admin"&&<li className='topListItem'><Link to='/write' className='link'>Write</Link></li>}
+                {/* <li className='topListItem'><Link to='/' className='link' onClick={handleLogout}>{user&&"Logout" }</Link></li> */}
             </ul>
         </div>
         <div className='topRight'>
