@@ -13,7 +13,7 @@ export default function Register() {
     e.preventDefault();
     const body = { username, password, email };
     try {
-      const response =await axios.post('http://localhost:5000/api/auth/register',body);
+      const response =await axios.post('https://algo-backend.herokuapp.com/api/auth/register',body);
       console.log(response);
       response.data && window.location.replace("/login");
     }

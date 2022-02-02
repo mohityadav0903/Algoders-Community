@@ -8,6 +8,7 @@ import AlgodersHome from '../../components/algoders/AlgodersHome';
 import './Home.css';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import SideBar from '../../components/sidebar/SideBar';
 
 const Home = () => {
     const {search} = useLocation();
@@ -15,7 +16,7 @@ const Home = () => {
     const [posts, setPosts] = useState([]);
 
     const fetchPosts = async () => {
-       const response = await axios.get('http://localhost:5000/api/posts'+search);
+       const response = await axios.get('https://algo-backend.herokuapp.com/api/posts'+search);
       console.log(response);
       setPosts(response.data);
   }
@@ -28,7 +29,7 @@ const Home = () => {
         <AlgodersHome />
         <div className='home'>
             <Posts posts={posts}/>
-            {/* <SideBar/> */}
+            <SideBar/>
           </div>
        </>;
 };

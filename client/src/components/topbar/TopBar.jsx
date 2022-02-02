@@ -4,7 +4,7 @@ import { Context } from '../../context/Context';
 import './TopBar.css'
 
 const TopBar = () => {
-    const PF = 'http://localhost:5000/images/';
+    const PF = 'https://algo-backend.herokuapp.com/images/';
     console.log(PF);
     const { user,dispatch } = useContext(Context);
     // const handleLogout = () => {

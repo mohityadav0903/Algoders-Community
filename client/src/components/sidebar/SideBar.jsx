@@ -6,7 +6,7 @@ import './SideBar.css';
 function SideBar() {
     const [cats, setCats] = useState([]);
     const getCats = async () => {
-        const response = await axios.get('http://localhost:5000/api/categories');
+        const response = await axios.get('https://algo-backend.herokuapp.com/api/categories');
         console.log(response);
         setCats(response.data);
     }
