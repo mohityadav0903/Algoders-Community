@@ -4,6 +4,7 @@ import Posts from '../../components/posts/Posts';
 // import SideBar from '../../components/sidebar/SideBar';
 // import Header from '../../components/topbar/header/Header';
 import AlgodersHome from '../../components/algoders/AlgodersHome';
+import About from '../../components/about/About';
 
 import './Home.css';
 import { useEffect } from 'react';
@@ -27,6 +28,7 @@ const Home = () => {
     return <>
         {/* <Header /> */}
         <AlgodersHome />
+            <About/>
         <div className='home'>
             <Posts posts={posts}/>
             <SideBar/>
