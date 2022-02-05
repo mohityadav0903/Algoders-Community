@@ -24,9 +24,10 @@ const TopBar = () => {
                 </li>
                 <li className='topListItem'><Link to='/' className='link'>About</Link></li>
                 <li className='topListItem'><Link to='/' className='link'>Contact</Link></li>
+                <li className='topListItem'><Link to='/blogs' className='link'>Blogs</Link></li>
                 <TopbarDropDown/>
                 {console.log(user)}
-                {user && user.role=="admin"&&<li className='topListItem'><Link to='/write' className='link'>Write</Link></li>}
+                {user && user.role==="admin"&&<li className='topListItem'><Link to='/write' className='link'>Write</Link></li>}
           </ul>
         </div>
         <div className='topRight'>

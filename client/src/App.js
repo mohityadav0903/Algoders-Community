@@ -3,6 +3,7 @@ import Home from "./pages/home/Home";
 import TopBar from "./components/topbar/TopBar";
 import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/contact";
+import Blogs from "./components/blogs/Blogs";
 
 import SinglePostPage from "./pages/singlePost/SinglePostPage";
 import Write from "./pages/write/Write";
@@ -25,6 +26,7 @@ function App() {
       
     <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/blogs" element={<Blogs/>} />
         <Route path="/post/:postid" element={<SinglePostPage />} />
         <Route path="/write" element={user?<Write />:<Register/>} />
         <Route path="/settings" element={user?<Settings />:<Register/>} />
