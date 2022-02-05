@@ -86,20 +86,20 @@ const Write = () => {
     console.log(file)
     return <div className='write'>
         { console.log(file)}
-        {file&&<img  className='writeImg' src={url} alt='img'/>}
-             <form className='writeForm' onSubmit={handleSubmit}>
-            <div className="writeFormGroup">
+        {file&&<img  className='writeImg img-fluid' src={url} alt='img'/>}
+             <form className='writeForm form' onSubmit={handleSubmit}>
+            <div className="writeFormGroup mb-3">
                 <label htmlFor="fileInput">
-                <i className="writeIcon fas fa-folder-plus"></i>
+                <i className="writeIcon fas fa-folder-plus my-3"></i>
                 </label>
-                <input type="file" id='fileInput' style={{display:'none'}}  onChange={handleChangeFile} />
-                <input type="text" placeholder='title' required className='writeInput' autoFocus={ true} onChange={e=>setTitle(e.target.value)}/>
+                <input type="file" id='fileInput' style={{display:'none'}}  onChange={handleChangeFile} className="form-control"/>
+                <input type="text" placeholder='title' required className='writeInput form-control' autoFocus={ true} onChange={e=>setTitle(e.target.value)}/>
+            </div>
+            <div className="writeFormGroup mb-3">
+                <textarea placeholder='Tell Your Story.....' type="text" required rows="2"  className='writeInput writeText form-control' onChange={e=>setDesc(e.target.value)}></textarea>
             </div>
             <div className="writeFormGroup">
-                <textarea placeholder='Tell Your Story.....' type="text" required rows="2" cols='2' className='writeInput writeText' onChange={e=>setDesc(e.target.value)}></textarea>
-            </div>
-            <div className="writeFormGroup">
-            <label>Select Category</label> 
+            <label className='form-label'>Select Category</label> 
                 <select onChange={(e)=>setCat(e.target.value)} >
                 <option value='CPP'>CPP</option>
                 <option value="WEB DEV" >WEB DEV</option>
