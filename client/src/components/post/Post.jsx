@@ -11,8 +11,9 @@ function Post({ post }) {
             </div>
             <Link to={`/post/${post._id}`} className='link'><span className="postTitle">{post.title}</span></Link>
             <hr />
-            <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
-            <p className='postDesc'>{post.desc}</p>
+           <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
+           {console.log(post.desc.substring(0,100))}
+            <p className='postDesc'>{post.desc.substring(0,200)}</p>
         </div>
   </div>;
 }
