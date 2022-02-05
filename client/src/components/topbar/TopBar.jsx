@@ -10,7 +10,7 @@ const TopBar = () => {
     const { user,dispatch } = useContext(Context);
 
     
-    return <div className='top'>
+    return <div className='top nav nav-bar'>
         <div className='topLeft'>
             <i className="topIcon fab fa-facebook"></i>
             <i className="topIcon fab fa-twitter"></i>
