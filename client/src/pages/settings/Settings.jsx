@@ -62,7 +62,7 @@ const Setting = () => {
       </form>
       <li className='topListItem'><Link to='/' className='link' onClick={handleLogout}>{user && "Logout"}</Link></li>
     </div>
-    <SideBar />
+    {/* <SideBar /> */}
   </div>);
 };
 
