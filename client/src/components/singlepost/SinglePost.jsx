@@ -23,8 +23,7 @@ const SinglePost = () => {
     useEffect(() => {
         getPost();
       }, [path]);  
-    const PF = 'https://algo-backend.herokuapp.com/images/'; 
-    const handleDelete=async ()=>{
+     const handleDelete=async ()=>{
         try {
             await axios.delete(`https://algo-backend.herokuapp.com/api/posts/` + path,{data:{ username: user.username }} );
             window.location.replace('/');
@@ -40,7 +39,7 @@ const SinglePost = () => {
     }
     return <div className='singlePost'>
         <div className="singlePostWrapper">
-            {post.photo && <img className='singlepostImg' src={PF + post.photo} alt=""/>}
+            {post.photo && <img className='singlepostImg' src={post.photo} alt=""/>}
             {updateMode ? <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="singlePostTitleInput" autoFocus/>:(<h1 className="singlePostTitle">
                 {title}
                 {post.username === user?.username && <div className="singlePostEdit">
