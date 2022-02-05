@@ -23,8 +23,8 @@ const SinglePost = () => {
     useEffect(() => {
         getPost();
       }, [path]);  
-     const handleDelete=async ()=>{
-        try {
+  const handleDelete = async () => {
+     try {
             await axios.delete(`https://algo-backend.herokuapp.com/api/posts/` + path,{data:{ username: user.username }} );
             window.location.replace('/');
         } catch (error) {
@@ -43,8 +43,14 @@ const SinglePost = () => {
             {updateMode ? <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="singlePostTitleInput" autoFocus/>:(<h1 className="singlePostTitle">
                 {title}
                 {post.username === user?.username && <div className="singlePostEdit">
-                    <i className="singlePostIcon far fa-edit" onClick={()=>setUpdateMode(true)}></i>
-                    <i className="singlePostIcon fas fa-trash" onClick={handleDelete}></i>
+            {/* <i className="singlePostIcon far fa-edit" onClick={() => setUpdateMode(true)}></i> */}
+            <span onClick={() => setUpdateMode(true)}>
+            <i className="singlePostIcon far fa-edit" ></i>
+             </span> 
+            {/* <i className="singlePostIcon fas fa-trash" onClick={handleDelete}></i> */}
+            <span onClick={handleDelete} >
+            <i className="singlePostIcon fas fa-trash" ></i>
+            </span>
                 </div>}
 
             </h1>)}

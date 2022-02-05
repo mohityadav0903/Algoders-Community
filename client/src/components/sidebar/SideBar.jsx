@@ -14,12 +14,7 @@ function SideBar() {
         getCats();
     },[]);
     return <div className='sidebar'>
-        <div className="sidebarItem">
-            <span className='sidebarTitle'>ABOUT ME</span>
-            <img src="https://usercontent1.hubstatic.com/13306390_f520.jpg" alt="" />
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, adipisci architecto? Voluptatibus dolore tempora ut perspiciatis quae quia, </p>
-        </div>
-        <div className="sidebarItem">
+       <div className="sidebarItem">
             <span className='sidebarTitle'>CATEGORIES</span>
             <ul className="sidebarList">
                 {cats.map((cat) => (

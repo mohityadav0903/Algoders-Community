@@ -3,9 +3,8 @@ import {Link} from 'react-router-dom';
 import './Post.css'
 
 function Post({ post }) {
-    const PF='https://algo-backend.herokuapp.com/images/';
-    return <div className='post'>
-        {post.photo && <img className='postImg' src={PF + post.photo} alt=""/>}
+   return <div className='post'>
+        {post.photo && <img className='postImg' src={post.photo} alt=""/>}
         <div className="postInfo">
             <div className="postcats">
                 {post.categories.map((cat) => <span key={cat} className="postcat">{cat}</span>)}

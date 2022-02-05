@@ -6,8 +6,8 @@ function Footer() {
     
         <div id="footer" className="footer-top">
             <div className="footer-top">
-                <div class="container">
-                    <div class="row">
+                <div className="container">
+                    <div className="row">
 
                         <div className="col-lg-3 col-md-6 footer-links">
                             <h4>Useful Links</h4>

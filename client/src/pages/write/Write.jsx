@@ -62,12 +62,7 @@ const Write = () => {
           formData.append('name', filename);
           formData.append('file', file);
           newPost.photo =url;
-          try {
-              await axios.post('https://algo-backend.herokuapp.com/api/upload', formData);
-           } catch (error) {
-              
-          }
-        }
+}
       }
     
 
