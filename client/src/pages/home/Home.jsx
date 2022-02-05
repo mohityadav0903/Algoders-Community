@@ -25,9 +25,9 @@ const Home = () => {
     return <>
         <AlgodersHome />
             <About/>
-        <div className='home'>
+        {/* <div className='home'>
             <Posts posts={posts}/>
-            </div>
+            </div> */}
        </>;
 };
 
