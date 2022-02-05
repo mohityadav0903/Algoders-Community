@@ -8,7 +8,7 @@ const TopbarDropDown = () => {
     return <>
                  <li className="nav-item dropdown topListItem">
           <Link className="nav-link dropdown-toggle link" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Categories
           </Link>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                  <DropDownElements />
