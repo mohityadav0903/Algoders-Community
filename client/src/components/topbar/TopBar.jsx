@@ -5,9 +5,7 @@ import TopbarDropDown from '../topbarDropDown/TopbarDropDown';
 import './TopBar.css'
 
 const TopBar = () => {
-    const PF = 'https://algo-backend.herokuapp.com/images/';
-    console.log(PF);
-    const { user,dispatch } = useContext(Context);
+  const { user,dispatch } = useContext(Context);
 
     
     return <div className='top'>
@@ -39,7 +37,7 @@ const TopBar = () => {
                 
             </>)}
            
-            <i className="topSearchIcon fas fa-search"></i>
+            {/* <i className="topSearchIcon fas fa-search"></i> */}
         </div>
   </div>;
 };
