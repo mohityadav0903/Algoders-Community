@@ -20,6 +20,13 @@ const Setting = () => {
   const handleLogout = () => {
     dispatch({ type: "LOGOUT" });
   };
+  const handleDeleteAccount = async () => {
+    const body = {
+      "userId": user._id,
+    };
+  await  axios.delete(`https://algo-backend.herokuapp.com/api/users/${user._id}`,{data:{"userId":user._id}}).then((res) => {<div>Your account has deleted</div>});
+    handleLogout();
+  };
  const handleSubmit =async (e) => {
       e.preventDefault();
       dispatch({ type: "UPDATE_START" });
@@ -43,13 +50,12 @@ const Setting = () => {
     <div className="settingsWrapper ">
       <div className="settingsTitle justify-content-center ">
         <span className="settingsTitleUpdate">Update Your Account</span>
-        {/* <span className="settingsTitleDelete">DeleteAccount</span> */}
       </div>
       <form className="settingsForm card justify-content-center py-5" onSubmit={handleSubmit}>
     <label >Email</label>
-        <input type="text" className='form-control w-25 text-red' placeholder={user.email} required onChange={(e) => setEmail(e.target.value)} />
+        <input type="text" className='form-control w-50 text-red' placeholder={user.email} required onChange={(e) => setEmail(e.target.value)} />
         <label >Password</label>
-        <input type="password" className='form-control w-25' required onChange={(e) => setPassword(e.target.value)} />
+        <input type="password" className='form-control w-50' required onChange={(e) => setPassword(e.target.value)} />
         <button className="settingsSubmitButton" type="submit">Update</button>
         {success && (
           <span
@@ -59,8 +65,9 @@ const Setting = () => {
           </span>
         )}
       </form>
-      <div className="py-5 ">
-      <button className='btn btn-outline-danger'><Link to='/' className='link' onClick={handleLogout}>{user && "Logout"}</Link></button>
+      <div className="py-3 ">
+        <button className='btn btn-warning text-white mx-2'><Link to='/' className='link' onClick={handleLogout}>{user && "Logout"}</Link></button>
+        <button className='btn btn-danger text-white mx-2'><Link to='/' className='link' onClick={handleDeleteAccount}>{user && "Delete Account"}</Link></button>
     </div>
     </div>
   </div>);
