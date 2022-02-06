@@ -4,10 +4,10 @@ import { Context } from '../../context/Context';
 import { useLocation } from 'react-router-dom';
 import TopbarDropDown from '../topbarDropDown/TopbarDropDown';
 import './TopBar.css'
-
 const TopBar = () => {
   const { user,dispatch } = useContext(Context);
     const {pathname} = useLocation();
+    
     
     return <div className='top nav nav-bar'>
         <div className='topLeft'>
