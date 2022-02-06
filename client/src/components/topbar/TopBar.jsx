@@ -9,7 +9,11 @@ const TopBar = () => {
   const { user,dispatch } = useContext(Context);
     const {pathname} = useLocation();
     
+<<<<<<< HEAD
      return <div className='top'>
+=======
+    return <div className='top nav nav-bar'>
+>>>>>>> db64211814cc727da171b9186691e00d7daaa6d8
         <div className='topLeft'>
             <i className="topIcon fab fa-facebook"></i>
             <i className="topIcon fab fa-twitter"></i>

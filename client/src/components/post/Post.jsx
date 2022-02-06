@@ -3,19 +3,19 @@ import {Link} from 'react-router-dom';
 import './Post.css'
 
 function Post({ post }) {
-   return <div className='post'>
-        {post.photo && <img className='postImg' src={post.photo} alt=""/>}
-        <div className="postInfo">
+   return <div className='post card'>
+        {post.photo && <img className='postImg card-img-top img-fluid' src={post.photo} alt=""/>}
+        <div className="postInfo card-body">
             <div className="postcats">
                 {post.categories.map((cat) => <span key={cat} className="postcat">{cat}</span>)}
             </div>
-            <Link to={`/post/${post._id}`} className='link'><span className="postTitle">{post.title}</span></Link>
+            <Link to={`/post/${post._id}`} className='link'><span className="postTitle card-title">{post.title}</span></Link>
             <hr />
            <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
            {console.log(post.desc.substring(0,100))}
-            <p className='postDesc'>{post.desc.substring(0,200)}</p>
+            <p className='postDesc container-fluid'>{post.desc.substring(0,100)}</p>
         </div>
-  </div>;
+  </div>
 }
 
 export default Post;

@@ -1,27 +1,12 @@
 #hero {
     width: 100%;
-    height: 80vh;
-    background: #052972;
+    background: black;
   }
   #hero .container {
     padding-top: 72px;
   }
-  #hero p {
-font-size: 40px;
-color: aliceblue;
-  }
-  #hero h1 {
-    margin: 0 0 10px 0;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 56px;
-    color: #fff;
-  }
-   #hero h2 { 
-    color: rgba(255, 255, 255, 0.6);
-    margin-bottom: 50px;
-    font-size: 24px;
-  }
+
+ 
   #hero .btn-get-started {
     font-family: "Jost", sans-serif;
     font-weight: 500;
@@ -59,47 +44,20 @@ color: aliceblue;
   }
   #hero .animated {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
+    height: 450px;
   }
-  @media (max-width: 991px) {
-    #hero {
-      height: 100vh;
-      text-align: center;
-    }
-    #hero .animated {
-      -webkit-animation: none;
-      animation: none;
-    }
-    #hero .hero-img {
-      text-align: center;
-    }
-    #hero .hero-img img {
-      width: 50%;
-    }
-  }
-  @media (max-width: 768px) {
-    #hero h1 {
-      font-size: 28px;
-      line-height: 36px;
-    }
-    #hero h2 {
-      font-size: 18px;
-      line-height: 24px;
-      margin-bottom: 30px;
-    }
-    #hero .hero-img img {
-      width: 70%;
-    }
-  }
-  @media (max-width: 575px) {
-    #hero .hero-img img {
-      width: 80%;
-    }
-    #hero .btn-get-started {
-      font-size: 16px;
-      padding: 10px 24px 11px 24px;
-    }
-  }
-  
+ @media(max-width:1000px)
+ {
+#hero .animated{
+  height: 400px;
+}
+ }
+ @media(max-width:850px)
+ {
+#hero .animated{
+  height: 300px;
+}
+ }
   @-webkit-keyframes up-down {
     0% {
       transform: translateY(10px);

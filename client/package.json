@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
@@ -44,7 +43,6 @@
     "autoprefixer": "^10.4.2",
     "install": "^0.13.0",
     "npm": "^8.4.0",
-    "postcss": "^8.4.5",
-    "tailwindcss": "^3.0.18"
+    "postcss": "^8.4.5"
   }
 }

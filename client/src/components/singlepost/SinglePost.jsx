@@ -37,10 +37,10 @@ const SinglePost = () => {
         } catch (error) {
         }
     }
-    return <div className='singlePost'>
-        <div className="singlePostWrapper">
+    return <div className='singlePost container-fluid flex justify-content-center'>
+        <div className="singlePostWrapper ">
             {post.photo && <img className='singlepostImg' src={post.photo} alt=""/>}
-            {updateMode ? <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="singlePostTitleInput" autoFocus/>:(<h1 className="singlePostTitle">
+            {updateMode ? <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="singlePostTitleInput form-control" autoFocus/>:(<h1 className="singlePostTitle">
                 {title}
                 {post.username === user?.username && <div className="singlePostEdit">
               <span onClick={() => setUpdateMode(true)}>
@@ -62,7 +62,7 @@ const SinglePost = () => {
             </div>
             {updateMode ? (
           <textarea
-            className="singlePostDescInput"
+            className="singlePostDescInput form-control"
             value={desc}
             onChange={(e) => setDesc(e.target.value)}
           />

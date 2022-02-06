@@ -4,7 +4,7 @@ import './Footer.css';
 function Footer() {
     return (
     
-        <div id="footer" className="footer-top">
+        <div id="footer" className="footer-top bg-black">
             <div className="footer-top">
                 <div className="container">
                     <div className="row">
@@ -12,10 +12,10 @@ function Footer() {
                         <div className="col-lg-3 col-md-6 footer-links">
                             <h4>Useful Links</h4>
                             <ul>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                                <li><i className="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                                <li className='font-bold'><i className="fa fa-home"></i> <a href="#">Home</a></li>
+                                <li><i className="fa fa-address-card"></i> <a href="#">About us</a></li>
+                                <li><i className="fa fa-laptop-code"></i> <a href="#">Blogs</a></li>
+                                <li><i className="fa fa-users"></i> <a href="#">Our Team</a></li>
                                 <li><i className="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
                             </ul>
                         </div>

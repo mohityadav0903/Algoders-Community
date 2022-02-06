@@ -61,6 +61,10 @@ const Setting = () => {
       </form>
       <li className='topListItem'><Link to='/' className='link' onClick={handleLogout}>{user && "Logout"}</Link></li>
     </div>
+<<<<<<< HEAD
+=======
+    {/* <SideBar /> */}
+>>>>>>> db64211814cc727da171b9186691e00d7daaa6d8
   </div>);
 };
 

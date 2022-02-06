@@ -6,7 +6,7 @@ import './singlepostpage.css';
 const SinglePostPage = () => {
   return <div className='single'>
       <SinglePost/>
-     <SideBar/>
+     {/* <SideBar/> */}
   </div>;
 };
 
