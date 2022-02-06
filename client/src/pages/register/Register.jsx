@@ -9,7 +9,7 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
-  const [valid, setValid] = useState(true);
+  const [valid, setValid] = useState(false);
 
   const createUser = async () => {
   const user = {
@@ -58,7 +58,6 @@ export default function Register() {
           <Link to="/login" className="link">Login</Link>
         </button>
         {error && <p className="registerError">Username or email already exists</p>}
-       {(!valid) && <p className="registerError">Please fill all the fields correctly</p>}
-    </div>
+     </div>
     )
 }
