@@ -2,24 +2,44 @@ import "./Register.css"
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { userSchema } from "../../validations/UserValidation";
 
 export default function Register() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
+  const [valid, setValid] = useState(false);
+
+  const createUser = async (e) => {
+    e.preventDefault();
+    const user = {
+      username,
+      password,
+      email,
+    };
+    const isValid = await userSchema.isValid(user);
+   return isValid;
+  };
+
   const handelSubmit = async (e) => {
     setError(false);
     e.preventDefault();
     const body = { username, password, email };
-    try {
-      const response =await axios.post('https://algo-backend.herokuapp.com/api/auth/register',body);
-      console.log(response);
-      response.data && window.location.replace("/login");
+    const isValid = await createUser(e);
+    if (isValid) {
+      try {
+        const response = await axios.post('https://algo-backend.herokuapp.com/api/auth/register', body);
+        console.log(response);
+        response.data && window.location.replace("/login");
+      }
+      catch (error) {
+        console.log(error);
+        setError(true);
+      }
     }
-    catch (error) {
-      console.log(error);
-      setError(true);
+    else{
+      setValid(false);
     }
   };
     return (
@@ -41,6 +61,7 @@ export default function Register() {
           <Link to="/login" className="link">Login</Link>
         </button>
         {error && <p className="registerError">Username or email already exists</p>}
+       {(!valid) && <p className="registerError">Please fill all the fields correctly</p>}
     </div>
     )
 }
