@@ -31,8 +31,8 @@ const TopBar = () => {
         </div>
         <div className='topRight'>
             {user ? (<>
-                <Link to="/settings">{user.profilePic ? <img className='topImg' src={user.profilePic} alt="" /> : <img className='topImg' src="https://th.bing.com/th/id/OIP.MLqa_eaUsAEh0ah2feV2swAAAA?w=149&h=169&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="" />}</Link>
-                <span className='topListItem'>Hello {user.username}</span>
+                <Link to="/settings" className='link'>{user.profilePic ? <img className='topImg' src={user.profilePic} alt="" /> : <img className='topImg' src="https://th.bing.com/th/id/OIP.MLqa_eaUsAEh0ah2feV2swAAAA?w=149&h=169&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="" />}
+                <span className='topListItem'>Hello {user.username}</span></Link>
             </>
             ) : (<>
                 <ul className='topList'>
