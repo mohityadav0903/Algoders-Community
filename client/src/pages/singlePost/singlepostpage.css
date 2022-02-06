@@ -1,3 +1,5 @@
 .single{
     display: flex;
+    background-color: black;
+    color: white;
 }

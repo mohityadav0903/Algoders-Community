@@ -1,19 +1,14 @@
 .login {
-    height: calc(100vh - 50px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5)
-      ),
-      url("https://images.pexels.com/photos/768473/pexels-photo-768473.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-    background-size: cover;
+   background-color: black;
   }
   
   .loginTitle {
     font-size: 50px;
+    color: white;
   }
   
   .loginForm {
@@ -24,6 +19,7 @@
   
   .loginForm > label {
     margin: 10px 0;
+    color: white;
   }
   
   .loginInput {
@@ -56,7 +52,7 @@
   
   .loginRegisterButton {
     position: absolute;
-    top: 60px;
+    top: 80px;
     right: 20px;
     background-color: teal;
     cursor: pointer;

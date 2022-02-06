@@ -27,9 +27,9 @@ const Login = () => {
         <span className="loginTitle">Login</span>
         <form className="loginForm" onSubmit={handleSubmit}>
             <label>Username</label>
-            <input className="loginInput" type="text" placeholder="Enter your username..." ref={userRef}/>
+            <input className="loginInput form-control" type="text" placeholder="Enter your username..." ref={userRef}/>
             <label>Password</label>
-            <input className="loginInput" type="password" placeholder="Enter your password..." ref={passwordRef}/>
+            <input className="loginInput form-control" type="password" placeholder="Enter your password..." ref={passwordRef}/>
             <button className="loginButton" disabled={isFetching}>Login</button>
         </form>
         <button className="loginRegisterButton" type='submit'>

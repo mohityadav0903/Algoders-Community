@@ -5,7 +5,7 @@ import '../topbar/TopBar.css'
 const TopbarDropDown = () => {
 
     return <>
-                 <li className="nav-item dropdown topListItem">
+                 <li className="nav-item dropdown topListItem fw-bold">
           <Link className="nav-link dropdown-toggle link" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categories
           </Link>

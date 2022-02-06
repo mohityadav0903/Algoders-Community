@@ -40,17 +40,17 @@ export default function Register() {
     }
 };
     return (
-        <div className="register">
+        <div className="register ">
       <span className="registerTitle">Register</span>
-      <form className="registerForm" onSubmit={handelSubmit}>
+      <form className="registerForm " onSubmit={handelSubmit}>
         <label>Username</label>
-          <input className="registerInput" type="text" placeholder="username"
+          <input className="registerInput form-control" type="text" placeholder="username"
           onChange={e=>setUsername(e.target.value)}/>
         <label>Email</label>
-          <input className="registerInput" type="text" placeholder="email@email"
+          <input className="registerInput form-control" type="text" placeholder="email@email"
           onChange={e=>setEmail(e.target.value)}/>
         <label>Password</label>
-          <input className="registerInput" type="password" placeholder="length between 6 and 10 characters "
+          <input className="registerInput form-control" type="password" placeholder="length between 6 and 10 characters "
         onChange={e=>setPassword(e.target.value)}  />
         <button className="registerButton">Register</button>
       </form>

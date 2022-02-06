@@ -32,10 +32,12 @@
   }
   #hero .animated {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
-    height: 450px;
+    height: 500px;
+    width: 650px;
   }
  @media(max-width:1000px)
  {
+
 #hero .animated{
   height: 400px;
 }
@@ -46,6 +48,9 @@
  }
  @media(max-width:850px)
  {
+  .get5-started{
+    margin: 0;
+  }
 #hero .animated{
   height: 300px;
 }

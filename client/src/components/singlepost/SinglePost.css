@@ -18,6 +18,7 @@
   margin: 10px;
   font-family: "Lora", serif;
   font-size: 28px;
+  color: white;
 }
 
 .singlePostTitleInput {
@@ -62,7 +63,7 @@
 }
 
 .singlePostDesc {
-  color: #666;
+  color: white;
   font-size: 18px;
   line-height: 25px;
 }
