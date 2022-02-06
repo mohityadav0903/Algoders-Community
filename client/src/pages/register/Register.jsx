@@ -11,14 +11,14 @@ export default function Register() {
   const [error, setError] = useState(false);
   const [valid, setValid] = useState(false);
 
-  const createUser = async (e) => {
-    e.preventDefault();
-    const user = {
+  const createUser = async () => {
+  const user = {
       username,
       password,
       email,
     };
     const isValid = await userSchema.isValid(user);
+    setValid(isValid);
    return isValid;
   };
 
@@ -26,7 +26,7 @@ export default function Register() {
     setError(false);
     e.preventDefault();
     const body = { username, password, email };
-    const isValid = await createUser(e);
+    const isValid =createUser();
     if (isValid) {
       try {
         const response = await axios.post('https://algo-backend.herokuapp.com/api/auth/register', body);
@@ -38,22 +38,19 @@ export default function Register() {
         setError(true);
       }
     }
-    else{
-      setValid(false);
-    }
-  };
+};
     return (
         <div className="register">
       <span className="registerTitle">Register</span>
       <form className="registerForm" onSubmit={handelSubmit}>
         <label>Username</label>
-          <input className="registerInput" type="text" placeholder="Enter your username..."
+          <input className="registerInput" type="text" placeholder="username"
           onChange={e=>setUsername(e.target.value)}/>
         <label>Email</label>
-          <input className="registerInput" type="text" placeholder="Enter your email..."
+          <input className="registerInput" type="text" placeholder="email@email"
           onChange={e=>setEmail(e.target.value)}/>
         <label>Password</label>
-          <input className="registerInput" type="password" placeholder="Enter your password..."
+          <input className="registerInput" type="password" placeholder="length between 6 and 10 characters "
         onChange={e=>setPassword(e.target.value)}  />
         <button className="registerButton">Register</button>
       </form>
@@ -61,7 +58,6 @@ export default function Register() {
           <Link to="/login" className="link">Login</Link>
         </button>
         {error && <p className="registerError">Username or email already exists</p>}
-       {(!valid) && <p className="registerError">Please fill all the fields correctly</p>}
-    </div>
+     </div>
     )
 }
