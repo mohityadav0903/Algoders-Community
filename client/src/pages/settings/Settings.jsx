@@ -60,7 +60,7 @@ const Setting = () => {
         )}
       </form>
       <div className="py-5 ">
-      <button className='btn btn-danger text-white'><Link to='/' className='link' onClick={handleLogout}>{user && "Logout"}</Link></button>
+      <button className='btn btn-outline-danger'><Link to='/' className='link' onClick={handleLogout}>{user && "Logout"}</Link></button>
     </div>
     </div>
   </div>);

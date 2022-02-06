@@ -81,7 +81,7 @@
     margin-top: 10px;
     margin-bottom: 10px;
     height: 30px;
-    border: none;
+    border: blue 1px solid;
     border-bottom: 1px solid lightgray;
   }
   
