@@ -63,9 +63,9 @@ const Setting = () => {
       </div>
       <form className="settingsForm card justify-content-center py-5" onSubmit={handleSubmit}>
     <label >Email</label>
-        <input type="text" className='form-control w-25 text-red' placeholder={user.email} required onChange={(e) => setEmail(e.target.value)} />
+        <input type="text" className='form-control w-50 text-red' placeholder={user.email} required onChange={(e) => setEmail(e.target.value)} />
         <label >Password</label>
-        <input type="password" className='form-control w-25' required onChange={(e) => setPassword(e.target.value)} />
+        <input type="password" className='form-control w-50' required onChange={(e) => setPassword(e.target.value)} />
         <button className="settingsSubmitButton" type="submit">Update</button>
         {success && (
           <span
@@ -75,9 +75,9 @@ const Setting = () => {
           </span>
         )}
       </form>
-      <div className="py-5 ">
-        <button className='btn btn-danger text-white'><Link to='/' className='link' onClick={handleLogout}>{user && "Logout"}</Link></button>
-        <button className='btn btn-danger text-white'><Link to='/' className='link' onClick={handleDeleteAccount}>{user && "Delete Account"}</Link></button>
+      <div className="py-3 ">
+        <button className='btn btn-warning text-white mx-2'><Link to='/' className='link' onClick={handleLogout}>{user && "Logout"}</Link></button>
+        <button className='btn btn-danger text-white mx-2'><Link to='/' className='link' onClick={handleDeleteAccount}>{user && "Delete Account"}</Link></button>
     </div>
     </div>
   </div>);

@@ -1,10 +1,18 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
     
         <div id="footer" className="footer-top bg-black">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            fill="#fff"
+            fillOpacity="1"
+            d="M0,224L48,218.7C96,213,192,203,288,213.3C384,224,480,256,576,229.3C672,203,768,117,864,112C960,107,1056,181,1152,192C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
             <div className="footer-top">
                 <div className="container">
                     <div className="row">
@@ -34,12 +42,11 @@ function Footer() {
                         <div className="col-lg-3 col-md-6 footer-links">
                             <h4>Our Social Networks</h4>
                             <div className="social-links mt-3">
-                                <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
-                                <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
-                                <a href="#" className="instagram"><i className="bx bxl-instagram"></i></a>
-                                <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a>
-                                <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
-                            </div>
+                                <a href="#" className="facebook" target={'_blank'}><i className=" fab fa-facebook"></i></a>
+                                <a href="https://www.linkedin.com/company/algoderscommunity/mycompany/" className="linkedin" target='_blank'><i class="fab fa-linkedin"></i></a>
+                                <a href="https://discord.gg/uVbgcvhc" className="discord"><i class="fab fa-discord" target='_blank'></i></a>
+                                <a href="https://www.instagram.com/askalgoders/" className="instagram" target='_blank'><i className="topIcon fab fa-instagram"></i></a>
+                             </div>
                         </div>
                     </div>
                 </div>

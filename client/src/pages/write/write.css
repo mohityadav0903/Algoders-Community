@@ -1,5 +1,6 @@
 .write {
     padding-top: 50px;
+    background-color: black;
   }
   
   .writeImg {
@@ -31,7 +32,7 @@
     font-size: 20px;
     border: 1px solid;
     border-radius: 50%;
-    color: rgb(129, 125, 125);
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
