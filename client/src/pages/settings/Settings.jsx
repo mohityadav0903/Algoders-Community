@@ -21,9 +21,6 @@ const Setting = () => {
     dispatch({ type: "LOGOUT" });
   };
   const handleDeleteAccount = async () => {
-    const body = {
-      "userId": user._id,
-    };
   await  axios.delete(`https://algo-backend.herokuapp.com/api/users/${user._id}`,{data:{"userId":user._id}}).then((res) => {<div>Your account has deleted</div>});
     handleLogout();
   };
