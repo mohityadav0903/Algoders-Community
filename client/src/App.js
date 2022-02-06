@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/contact";
 import Blogs from "./components/blogs/Blogs";
 
+
 import SinglePostPage from "./pages/singlePost/SinglePostPage";
 import Write from "./pages/write/Write";
 import Settings from "./pages/settings/Settings";

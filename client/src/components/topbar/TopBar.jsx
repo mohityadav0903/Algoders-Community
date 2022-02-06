@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import { useLocation } from 'react-router-dom';
 import TopbarDropDown from '../topbarDropDown/TopbarDropDown';
-import './TopBar.css'
 
+import './TopBar.css'
 const TopBar = () => {
   const { user,dispatch } = useContext(Context);
     const {pathname} = useLocation();
@@ -48,7 +48,8 @@ const TopBar = () => {
 //   </div>;
 <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <div className="container-fluid ">
-    <a className="navbar-brand " href="#">Algoders Community</a>
+    <a className="navbar-brand " href="/">
+      Algoders Community</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -57,7 +58,7 @@ const TopBar = () => {
                 <li className='topListItem nav-item my-2 fw-bold'>
                     <Link to='/' className='link'>Home</Link>
                 </li>
-                <li className='topListItem nav-item my-2 fw-bolder'><Link to='/' className='link'>About</Link></li>
+                <li className='topListItem nav-item my-2 fw-bolder'><Link to='/'   className='link'>About</Link></li>
                   <li className='topListItem nav-item my-2 fw-bold'><Link to='/' className='link'>Contact</Link></li>
                   <li className='topListItem nav-item my-2 fw-bold'><Link to='/blogs' className='link'>Blogs</Link></li>
                   {pathname==="/blogs"&& <TopbarDropDown/>  }

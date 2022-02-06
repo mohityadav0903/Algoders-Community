@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
@@ -41,12 +42,11 @@ function Footer() {
                         <div className="col-lg-3 col-md-6 footer-links">
                             <h4>Our Social Networks</h4>
                             <div className="social-links mt-3">
-                                <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
-                                <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
-                                <a href="#" className="instagram"><i className="bx bxl-instagram"></i></a>
-                                <a href="#" className="google-plus"><i className="bx bxl-skype"></i></a>
-                                <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>
-                            </div>
+                                <a href="#" className="facebook" target={'_blank'}><i className=" fab fa-facebook"></i></a>
+                                <a href="https://www.linkedin.com/company/algoderscommunity/mycompany/" className="linkedin" target='_blank'><i class="fab fa-linkedin"></i></a>
+                                <a href="https://discord.gg/uVbgcvhc" className="discord"><i class="fab fa-discord" target='_blank'></i></a>
+                                <a href="https://www.instagram.com/askalgoders/" className="instagram" target='_blank'><i className="topIcon fab fa-instagram"></i></a>
+                             </div>
                         </div>
                     </div>
                 </div>
