@@ -28,6 +28,10 @@
   .settingsForm {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+
   }
   
   .settingsPP {
@@ -86,8 +90,8 @@
     width: 150px;
     border: none;
     border-radius: 10px;
-    color: teal;
-    background-color:black;
+    color: white;
+    background-color: blue;
     padding: 10px;
     margin-top: 20px;
     cursor: pointer;
@@ -97,5 +101,5 @@
   }
   
   .settingsSubmitButton:hover {
-    background-color: rgb(1, 114, 114);
+    background-color: green;
   }

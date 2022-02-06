@@ -39,17 +39,17 @@ const Setting = () => {
       }
     };
 
-  return (<div className='settings'>
-    <div className="settingsWrapper">
-      <div className="settingsTitle">
+  return (<div className='settings vh-80 text-center'>
+    <div className="settingsWrapper ">
+      <div className="settingsTitle justify-content-center ">
         <span className="settingsTitleUpdate">Update Your Account</span>
         {/* <span className="settingsTitleDelete">DeleteAccount</span> */}
       </div>
-      <form className="settingsForm" onSubmit={handleSubmit}>
+      <form className="settingsForm card justify-content-center py-5" onSubmit={handleSubmit}>
     <label >Email</label>
-        <input type="text" placeholder={user.email} required onChange={(e) => setEmail(e.target.value)} />
+        <input type="text" className='form-control w-25 text-red' placeholder={user.email} required onChange={(e) => setEmail(e.target.value)} />
         <label >Password</label>
-        <input type="password" required onChange={(e) => setPassword(e.target.value)} />
+        <input type="password" className='form-control w-25' required onChange={(e) => setPassword(e.target.value)} />
         <button className="settingsSubmitButton" type="submit">Update</button>
         {success && (
           <span
@@ -59,7 +59,9 @@ const Setting = () => {
           </span>
         )}
       </form>
-      <li className='topListItem'><Link to='/' className='link' onClick={handleLogout}>{user && "Logout"}</Link></li>
+      <div className="py-5 ">
+      <button className='btn btn-danger text-white'><Link to='/' className='link' onClick={handleLogout}>{user && "Logout"}</Link></button>
+    </div>
     </div>
   </div>);
 };
