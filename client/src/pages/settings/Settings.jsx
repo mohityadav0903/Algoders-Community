@@ -1,6 +1,5 @@
 import React from 'react';
 import { useContext,useState} from 'react';
-import SideBar from '../../components/sidebar/SideBar';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import axios from 'axios';
@@ -44,7 +43,7 @@ const Setting = () => {
     <div className="settingsWrapper">
       <div className="settingsTitle">
         <span className="settingsTitleUpdate">Update Your Account</span>
-        <span className="settingsTitleDelete">DeleteAccount</span>
+        {/* <span className="settingsTitleDelete">DeleteAccount</span> */}
       </div>
       <form className="settingsForm" onSubmit={handleSubmit}>
     <label >Email</label>
@@ -62,7 +61,6 @@ const Setting = () => {
       </form>
       <li className='topListItem'><Link to='/' className='link' onClick={handleLogout}>{user && "Logout"}</Link></li>
     </div>
-    <SideBar />
   </div>);
 };
 
