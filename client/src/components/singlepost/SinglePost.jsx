@@ -44,7 +44,7 @@ const SinglePost = () => {
     }
     return <div className='singlePost container-fluid flex justify-content-center'>
         <div className="singlePostWrapper ">
-            {post.photo && <img className='singlepostImg' src={post.photo} alt=""/>}
+            {post.photo && <img className='singlepostImg img-fluid' src={post.photo} alt=""/>}
             {updateMode ? <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="singlePostTitleInput form-control" autoFocus/>:(<h1 className="singlePostTitle">
                 {title}
                 {post.username === user?.username && <div className="singlePostEdit">
