@@ -109,11 +109,7 @@ const Write = () => {
             </div>
             <div className="writeFormGroup mb-3 ">
                 {/* <textarea placeholder='Tell Your Story.....' type="text" required rows="2"  className='writeInput writeText form-control' onChange={e=>setDesc(e.target.value)}></textarea> */}
-<<<<<<< HEAD
-                <TextEditor initialValue="" className='writeInput writeText form-control' getValue={getValue} />
-=======
                 <TextEditor initialValue="" getValue={getValue} className='writeText writeInput' />
->>>>>>> 4c87764823a1d6f9e47a92a7806de8635466f0be
             </div>
             <div className="writeFormGroup mb-3">
             <label className='form-label'>Select Category</label> 
