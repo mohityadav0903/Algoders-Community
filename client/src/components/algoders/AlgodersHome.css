@@ -3,10 +3,8 @@
     background: black;
   }
   #hero .container {
-    padding-top: 72px;
+    padding-top: 32px;
   }
-
- 
 
   #hero .btn-get-started:hover {
     background: #209dd8;
@@ -35,25 +33,36 @@
     height: 500px;
     width: 650px;
   }
+  .primetxt{
+    font-size: 40px;
+  }
  @media(max-width:1000px)
  {
 
 #hero .animated{
   height: 400px;
 }
-.prime-txt
-{
-  display: none;
+.primetxt{
+  font-size: xx-large;
 }
  }
  @media(max-width:850px)
  {
-  .get5-started{
+  .get-started{
     margin: 0;
+  }
+  .primetxt{
+    font-size: x-large;
   }
 #hero .animated{
   height: 300px;
 }
+ }
+ @media(max-width:500px)
+ {
+   .primetxt{
+     font-size: larger;
+   }
  }
   @-webkit-keyframes up-down {
     0% {

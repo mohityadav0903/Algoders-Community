@@ -5,15 +5,18 @@ import '../topbar/TopBar.css'
 const TopbarDropDown = () => {
 
     return <>
-                 <li className="nav-item dropdown topListItem fw-bold">
-          <Link className="nav-link dropdown-toggle link" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                 {/* <li className="nav-item dropdown topListItem fw-bold ">
+          <Link className="nav-link dropdown-toggle link text-white" to="/blogs" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categories
           </Link>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                  <DropDownElements />
             </ul>
-            </li>
-            
+            </li> */}
+            <ul class="nav justify-content-center bg-black py-3 text-white">
+
+   <DropDownElements />
+            </ul>
         </>;
 };
 

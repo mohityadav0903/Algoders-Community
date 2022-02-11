@@ -46,43 +46,48 @@ const TopBar = () => {
 //             {/* <i className="topSearchIcon fas fa-search"></i> */}
 //         </div>
 //   </div>;
-<nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-  <div className="container-fluid ">
-    <a className="navbar-brand " href="/">
-      Algoders Community</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul className=' navbar-nav  mx-auto'>
-                <li className='topListItem nav-item my-2 fw-bold'>
-                    <Link to='/' className='link'>Home</Link>
-                </li>
-                <li className='topListItem nav-item my-2 fw-bolder'><Link to='/'   className='link'>About</Link></li>
-                  <li className='topListItem nav-item my-2 fw-bold'><Link to='/' className='link'>Contact</Link></li>
-                  <li className='topListItem nav-item my-2 fw-bold'><Link to='/blogs' className='link'>Blogs</Link></li>
-                  {pathname==="/blogs"&& <TopbarDropDown/>  }
-                  {console.log(user)}
-                 {user && user.role==="admin"&&<li className='topListItem'><Link to='/write' className='link nav-item fw-bold'>Write</Link></li>}
-           </ul>
-         
-        
-             {user ? (<>
+<>
+<nav className="navbar navbar-expand-lg navbar-light bg-black sticky-top text-white py-3">
+  <div className="container-fluid  ">
+      {user ? (<div className=' user'>
                  <Link to="/settings" className='link '>{user.profilePic ? <img className='topImg' src={user.profilePic} alt="" /> : <img className='topImg' src="https://th.bing.com/th/id/OIP.MLqa_eaUsAEh0ah2feV2swAAAA?w=149&h=169&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="" />}
-                 <span className='topListItem fw-bold '>Hello {user.username}</span></Link>
-             </>
+                 <span className=' fw-bold wlcmtxt '>Hello {user.username}</span></Link>
+             </div>
              ) : (<>
-                 <ul className='topList navbar-nav '>
-                     <button className='topListItem nav-item btn btn-primary text-black fw-bolder my-2 '><Link to='/login' className='link'>Login</Link></button>
-                    <button className='topListItem nav-item btn btn-success text-black fw-bolder my-2'><Link to='/register' className='link'>register</Link></button>
+                 <ul className=' navbar-nav  topList '>
+                 <Link to='/login' className='link'>    <button className='topListItem nav-item btn btn-primary text-black fw-bolder my-2 '>Login</button></Link>
+                   <Link to='/register' className='link'> <button className='d-none d-lg-block topListItem nav-item btn btn-success text-black fw-bolder my-2'>Register</button></Link>
            </ul>
                 
              </>)}
            
              {/* <i className="topSearchIcon fas fa-search"></i> */}
+
+    <a className="navbar-brand mx-auto text-white " href="/">
+      Algoders <div className='d-none d-sm-inline'> Community</div></a>
+    <button className="navbar-toggler bg-light text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse text-white" id="navbarSupportedContent">
+    <ul className=' navbar-nav topList  ms-auto text-white'>
+                <li className='topListItem nav-item my-2 fw-bold'>
+                    <Link to='/' className='link'>Home</Link>
+                </li>
+                <li className='topListItem nav-item my-2 fw-bolder'><Link to='/' className='link' >About</Link></li>
+                  <li className='topListItem nav-item my-2 fw-bold'><Link to='/' className='link'>Contact</Link></li>
+                  <li className='topListItem nav-item my-2 fw-bold'><Link to='/blogs' className='link'>Blogs</Link></li>
+                 
+                  {console.log(user)}
+                 {user && user.role==="admin"&&<li className='topListItem'><Link to='/write' className='link nav-item fw-bold'>Write</Link></li>}
+           </ul>
+          
+         
     </div>
+        
   </div>
 </nav>
+ {pathname==="/blogs"&& <TopbarDropDown/>  }
+ </>
      )
 };
 
