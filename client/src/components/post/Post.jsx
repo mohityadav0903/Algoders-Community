@@ -1,8 +1,11 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import parse from 'html-react-parser';
 import './Post.css'
 
 function Post({ post }) {
+    console.log(parse(post.desc))
+    const postDesc = parse(post.desc);
    return <div className='post card'>
         {post.photo && <img className='postImg card-img-top img-fluid' src={post.photo} alt=""/>}
         <div className="postInfo card-body">
@@ -12,8 +15,8 @@ function Post({ post }) {
             <Link to={`/post/${post._id}`} className='link'><span className="postTitle card-title">{post.title}</span></Link>
             <hr />
            <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
-           {console.log(post.desc.substring(0,100))}
-            <p className='postDesc container-fluid'>{post.desc.substring(0,100)}</p>
+           {/* {console.log(post.desc.substring(0,100))} */}
+            <p className='postDesc container-fluid'>{postDesc}</p>
         </div>
   </div>
 }

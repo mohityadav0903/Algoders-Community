@@ -46,6 +46,13 @@ const TopBar = () => {
 //             {/* <i className="topSearchIcon fas fa-search"></i> */}
 //         </div>
 //   </div>;
+<<<<<<< HEAD
+<nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <div className="container-fluid ">
+    <Link className="navbar-brand " to="/">
+      Algoders Community</Link>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+=======
 <>
 <nav className="navbar navbar-expand-lg navbar-light bg-black sticky-top text-white py-1 top">
   <div className="container-fluid  ">
@@ -66,6 +73,7 @@ const TopBar = () => {
     <a className="navbar-brand mx-auto text-white " href="/">
       Algoders <div className='d-none d-sm-inline'> Community</div></a>
     <button className="navbar-toggler bg-light text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+>>>>>>> 74f702ce89b5c2fcaf8538fc6fbbf099171f0afc
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse text-white" id="navbarSupportedContent">
