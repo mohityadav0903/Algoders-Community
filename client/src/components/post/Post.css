@@ -3,7 +3,8 @@
     margin: 5px 25px 40px 25px;
     display: flex;
     flex-direction: column;
- 
+    
+     
   }
   
   .postImg {
@@ -27,13 +28,20 @@
     margin-right: 10px;
     cursor: pointer;
   }
+  .post:hover{
+    transform:scale(1.02);
+    background-color: black;
+    box-shadow: 0 0 10px white;
+    color: white;
+  }
   
   .postTitle {
     font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
-    font-size: 24px;
+    font-size: 44px;
     font-weight: 900;
     margin-top: 15px;
     cursor: pointer;
+    color: blue;
   }
   
   .postDate {
@@ -41,8 +49,8 @@
     font-style: italic;
     font-size: 13px;
     font-weight: 400;
-    color: #999999;
-    margin-top: 15px;
+    color: red;
+    margin-top: 5px;
   }
   
   .postDesc {

@@ -107,9 +107,9 @@ const Write = () => {
                 <input type="text" placeholder='title' required className='writeInput form-control' autoFocus={ true} onChange={e=>setTitle(e.target.value)}/>
           </div>
             </div>
-            <div className="writeFormGroup mb-3">
+            <div className="writeFormGroup mb-3 ">
                 {/* <textarea placeholder='Tell Your Story.....' type="text" required rows="2"  className='writeInput writeText form-control' onChange={e=>setDesc(e.target.value)}></textarea> */}
-                <TextEditor initialValue="" getValue={getValue} />
+                <TextEditor initialValue="" getValue={getValue} className='writeText writeInput' />
             </div>
             <div className="writeFormGroup mb-3">
             <label className='form-label'>Select Category</label> 

@@ -46,15 +46,8 @@ const TopBar = () => {
 //             {/* <i className="topSearchIcon fas fa-search"></i> */}
 //         </div>
 //   </div>;
-<<<<<<< HEAD
-<nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-  <div className="container-fluid ">
-    <Link className="navbar-brand " to="/">
-      Algoders Community</Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-=======
 <>
-<nav className="navbar navbar-expand-lg navbar-light bg-black sticky-top text-white py-1 top">
+<nav className="navbar navbar-expand-lg navbar-light bg-black sticky-top text-white py-1 top flex d-flex">
   <div className="container-fluid  ">
       {user ? (<div className=' user'>
                  <Link to="/settings" className='link '>{user.profilePic ? <img className='topImg' src={user.profilePic} alt="" /> : <img className='topImg' src="https://th.bing.com/th/id/OIP.MLqa_eaUsAEh0ah2feV2swAAAA?w=149&h=169&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="" />}
@@ -70,10 +63,9 @@ const TopBar = () => {
            
              {/* <i className="topSearchIcon fas fa-search"></i> */}
 
-    <a className="navbar-brand mx-auto text-white " href="/">
+    <a className="navbar-brand mx-auto text-white ">
       Algoders <div className='d-none d-sm-inline'> Community</div></a>
     <button className="navbar-toggler bg-light text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
->>>>>>> 74f702ce89b5c2fcaf8538fc6fbbf099171f0afc
       <span className="navbar-toggler-icon"></span>
     </button>
     <div className="collapse navbar-collapse text-white" id="navbarSupportedContent">
