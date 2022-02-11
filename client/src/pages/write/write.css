@@ -8,6 +8,20 @@
     border-radius: 10px;
     object-fit: cover;
   }
+  .jodit-status-bar {
+    visibility: collapse;
+  }
+  .jodit-container{
+    display: flex;
+    min-width: 600px;
+    min-height: 600px;
+    flex-direction: column;
+  
+  }
+  .jodit-container textarea{
+    width: 600px;
+    
+  }
   
   .writeForm {
     position: relative;

@@ -43,9 +43,9 @@ const SinglePost = () => {
         }
     }
     return <div className='singlePost container-fluid flex justify-content-center'>
-        <div className="singlePostWrapper ">
+        <div className="singlePostWrapper container-fluid  ">
             {post.photo && <img className='singlepostImg img-fluid' src={post.photo} alt=""/>}
-            {updateMode ? <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="singlePostTitleInput form-control" autoFocus/>:(<h1 className="singlePostTitle">
+            {updateMode ? <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} className="singlePostTitleInput form-control container-fluid" autoFocus/>:(<h1 className="singlePostTitle">
                 {title}
                 {post.username === user?.username && <div className="singlePostEdit">
               <span onClick={() => setUpdateMode(true)}>
@@ -72,7 +72,7 @@ const SinglePost = () => {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <p className="singlePostDesc">{parse(desc)}</p>
+          <p className="singlePostDesc container-fluid">{parse(desc)}</p>
             )}
             {updateMode&& <button className="singlePostButton" onClick={handleUpdate}>Update</button>}
           </div>

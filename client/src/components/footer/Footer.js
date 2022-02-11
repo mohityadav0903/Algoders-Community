@@ -1,6 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
+import Logo from '../../assets/logo.jpeg'
 
 function Footer() {
     return (
@@ -47,6 +48,9 @@ function Footer() {
                                 <a href="https://discord.gg/uVbgcvhc" className="discord"><i class="fab fa-discord" target='_blank'></i></a>
                                 <a href="https://www.instagram.com/askalgoders/" className="instagram" target='_blank'><i className="topIcon fab fa-instagram"></i></a>
                              </div>
+                        </div>
+                        <div className="col-lg-3 col-md-6 footer-links">
+                         <img src={Logo} alt="" className='img-fluid w-50'/>
                         </div>
                     </div>
                 </div>
