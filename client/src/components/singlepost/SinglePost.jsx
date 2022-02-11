@@ -1,13 +1,16 @@
 import React,{useEffect,useState,useContext} from 'react';
 import { useLocation } from 'react-router';
 import axios from 'axios';
-import {Context} from '../../context/Context';
+import { Context } from '../../context/Context';
+import parse from 'html-react-parser';
 import { Link } from 'react-router-dom';
 import './SinglePost.css'
 
 const SinglePost = () => {
-    const {user}=useContext(Context);
-    const location=useLocation();
+  const { user } = useContext(Context);
+  console.log(user);
+  const location = useLocation();
+  
     const path = location.pathname.split("/")[2];
     const [post, setPost] = useState({});
     const [title, setTitle] = useState('');
@@ -20,9 +23,11 @@ const SinglePost = () => {
         setTitle(response.data.title);
         setDesc(response.data.desc);
     }
-    useEffect(() => {
+  console.log(post);
+ useEffect(() => {
         getPost();
-      }, [path]);  
+    }, [path]); 
+  
   const handleDelete = async () => {
      try {
             await axios.delete(`https://algo-backend.herokuapp.com/api/posts/` + path,{data:{ username: user.username }} );
@@ -56,9 +61,9 @@ const SinglePost = () => {
             <div className="singlePostInfo">
                 <Link to={`/?user=${post.username}`} className='link'>
                    <span className='singlePostAuthor'>Author : <b>{post.username}</b> </span>
-                   </Link>
-              
-            <span className='singlePostDate'>{new Date(post.createdAt).toDateString()}</span>
+          </Link>
+          
+             <span className='singlePostDate'>{new Date(post.createdAt).toDateString()}</span>
             </div>
             {updateMode ? (
           <textarea
@@ -67,7 +72,7 @@ const SinglePost = () => {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <p className="singlePostDesc">{desc}</p>
+          <p className="singlePostDesc">{parse(desc)}</p>
             )}
             {updateMode&& <button className="singlePostButton" onClick={handleUpdate}>Update</button>}
           </div>

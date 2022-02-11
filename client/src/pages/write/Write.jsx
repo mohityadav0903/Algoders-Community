@@ -3,20 +3,26 @@ import axios from 'axios';
 import { Context } from '../../context/Context';
 import { storage } from '../../firebase/firebase';
 import './write.css'
+import TextEditor from '../../components/texteditor/TextEditor';
 
 const Write = () => {
     const [title, setTitle] = useState('');
-    const [desc, setDesc] = useState('');
+    // const [desc, setDesc] = useState('');
+    const [value, setValue] = useState("");
     const [file, setFile] = useState(null);
     const [url,setUrl]=useState("");
     const [cat, setCat] = useState('');
     const { user } = useContext(Context);
+    const getValue = (value) => {
+        setValue(value);
+      };
     const newPost = {
         title,
-        desc,
+    desc: value,
         categories: cat,
         username: user.username,
     };
+    console.log(newPost);
 
     const handleChangeFile = (e)=> {
         console.log("gya");
@@ -102,7 +108,8 @@ const Write = () => {
           </div>
             </div>
             <div className="writeFormGroup mb-3">
-                <textarea placeholder='Tell Your Story.....' type="text" required rows="2"  className='writeInput writeText form-control' onChange={e=>setDesc(e.target.value)}></textarea>
+                {/* <textarea placeholder='Tell Your Story.....' type="text" required rows="2"  className='writeInput writeText form-control' onChange={e=>setDesc(e.target.value)}></textarea> */}
+                <TextEditor initialValue="" getValue={getValue} />
             </div>
             <div className="writeFormGroup mb-3">
             <label className='form-label'>Select Category</label> 
