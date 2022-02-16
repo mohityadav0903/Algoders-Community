@@ -2,7 +2,7 @@
 
 Hi there! We're thrilled that you'd like to contribute to this project. Your help is essential for keeping it great.
 
-Please note that this project is released with a [Contributor Code of Conduct](https://github.com/mohityadav0903/Algoders-Community). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](https://github.com/mohityadav0903/Algoders-Community/blob/main/CODE-OF-CONDUCT.md). By participating in this project you agree to abide by its terms.
 
 ## Issues and PRs
 
