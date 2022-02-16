@@ -9,7 +9,7 @@
 <a href="https://algo-testsite.herokuapp.com/" target="_blank">Visit Our Website💻</a>
 </h2>
 
-So, here you go! Contribute to the Open Source Website of CodeIN Community 🤩 Excited?
+So, here you go! Contribute to the Open Source Website of Algoders Community 🤩 Excited?
 <div align="left">
 <a href="https://github.com/mohityadav0903/Algoders-Community"><img src="https://sloc.xyz/github/mohityadav0903/Algoders-Community" alt="LOC"/></a>
 <a href="https://github.com/mohityadav0903/Algoders-Community"><img src="https://img.shields.io/github/stars/mohityadav0903/Algoders-Community" alt="Stars Badge"/></a>
@@ -22,10 +22,11 @@ So, here you go! Contribute to the Open Source Website of CodeIN Community 🤩 
 # Contribution is fun! 🧡
 
 ## 📌 Tech Stack
-[![HTML](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)]
-[![CSS](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)]
-[![JS](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)]
-[![ReactJS](https://img.shields.io/badge/reactjs-%23563D7C.svg?style=for-the-badge&logo=react&logoColor=white")]
+![HTML](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white)
+![JS](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![ReactJS](https://img.shields.io/badge/reactjs-%23563D7C.svg?style=for-the-badge&logo=react&logoColor=white")
+![BootStrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white")
 
 
 <h1 align=center> OUR VALUABLE CONTRIBUTORS✨ </h1>
