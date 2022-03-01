@@ -13,6 +13,7 @@ const DropDownElements = () => {
     );
     console.log(response);
     setCats(response.data);
+    setExec(true);
   };
   useEffect(() => {
     getCats();

@@ -17,6 +17,7 @@ const Posts = () => {
     );
     console.log(response);
     setPosts(response.data);
+    setExec(true);
   };
   useEffect(() => {
     fetchPosts();
