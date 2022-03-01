@@ -17,7 +17,6 @@ const Posts = () => {
     );
     console.log(response);
     setPosts(response.data);
-    setExec(true);
   };
   useEffect(() => {
     fetchPosts();
@@ -28,7 +27,7 @@ const Posts = () => {
         posts.map((post) => <Post key={post._id} post={post} />)
       ) : (
         <div className="puffLoader">
-          <Puff color="#2D81F7" height={50} width={50} className="loader" />
+          <Puff color="#2D81F7" height={75} width={75} className="loader" />
         </div>
       )}
     </div>
