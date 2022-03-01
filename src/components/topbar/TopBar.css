@@ -1,3 +1,89 @@
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+
+a:hover {
+  color: white;
+}
+
+.main-header {
+  height: 90px;
+  background-color: #05051c;
+  color: white;
+  /* padding: 20px; */
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-right: 30px;
+}
+
+.navbarNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 86px;
+  height: 70px;
+  /* padding-left: 5px; */
+  /* margin-right: 26px; */
+  margin: 0;
+}
+
+.brand {
+  margin: 6px 12px;
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "open sans";
+}
+
+.brand a {
+  text-decoration: none;
+  color: #47b2e4;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.nav-list-items{
+  margin-top: 0;
+}
+.nav-list-item {
+  display: inline;
+  padding: 0 15px;
+  transition: 0.3s ease;
+}
+.nav-list-item2 {
+  display: inline;
+  /* padding: 0 7px; */
+  transition: 0.3s ease;
+}
+
+.nav-list-items li a {
+  text-decoration: none;
+  color: rgba(5, 5, 5, 0.87);
+  color: inherit;
+ 
+  font-size: 20px;
+}
+
+.nav-list-item:hover {
+  
+  border-bottom: 4px solid #47b2e4;
+  font-weight: bold;
+  border-radius: 7px;
+  padding-bottom: 15px;
+}
+
+
+
+
 .top {
     z-index: 99;
     margin-top: 0;
