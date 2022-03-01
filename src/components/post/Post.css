@@ -30,7 +30,7 @@
   }
   .post:hover{
     transform:scale(1.02);
-    background-color: black;
+    background-color: #181A18 ;
     box-shadow: 0 0 10px white;
     color: white;
   }
