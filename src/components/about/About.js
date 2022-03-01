@@ -1,9 +1,16 @@
-import React from "react";
+import React ,{ useEffect} from "react";
 import './About.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function About(){
+
+  //adding use effect for scrolling
+  useEffect(()=> {
+    Aos.init({duration:2000});
+  },[]); 
     return (
-       <div>
+       <div data-aos="fade-in">
         <div id="section2 bg-black" >
         <div className="container ">
           <div className="row h-100 align-items-center ">

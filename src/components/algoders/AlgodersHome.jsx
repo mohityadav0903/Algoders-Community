@@ -1,7 +1,9 @@
-import React from 'react';
+import React ,{useEffect}from 'react';
 import './AlgodersHome.css';
 
+
 export default function Home() {
+  
     return (
         <div>
              <section id="hero" className="d-flex h-100 ">
