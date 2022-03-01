@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
-import { ThreeDots } from "react-loader-spinner";
+import { ThreeDots } from "@bit/mhnpd.react-loader-spinner.three-dots";
 
 const DropDownElements = () => {
   const [cats, setCats] = useState([]);
