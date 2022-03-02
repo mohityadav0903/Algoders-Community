@@ -2,6 +2,9 @@
   "name": "react_blog_app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
@@ -18,7 +21,8 @@
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.5",
     "web-vitals": "^2.1.4",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "react-loader-spinner": "^6.0.0-0"
   },
   "scripts": {
     "start": "react-scripts start",
