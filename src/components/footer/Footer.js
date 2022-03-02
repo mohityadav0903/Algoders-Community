@@ -1,12 +1,19 @@
-import React from 'react';
+import React ,{useEffect} from 'react';
 import './Footer.css';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/logo.jpeg'
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 
 function Footer() {
+    useEffect(()=> {
+        Aos.init({duration:2000})
+    })
+
     return (
     
-        <div id="footer" className="footer-top bg-black">
+        <div id="footer" className="footer-top bg-black" data-aos="fade-up"> 
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#fff"

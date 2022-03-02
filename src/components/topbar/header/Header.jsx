@@ -1,8 +1,11 @@
-import React from 'react';
+import React , {useEffect} from 'react';
 import './Header.css';
 
+
 const Header = () => {
-    return <div className='header'>
+
+  
+    return <div className='header' >
         <div className='headerTitles'>
 
         <span className='headerTitleSm'>React and Node</span>

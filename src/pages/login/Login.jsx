@@ -1,10 +1,12 @@
 import axios from 'axios';
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import './Login.css'
 
+
 const Login = () => {
+    
     const userRef = useRef();
     const passwordRef = useRef();
     const {user,dispatch, isFetching } = useContext(Context);
@@ -23,7 +25,7 @@ const Login = () => {
     }
   };
     console.log(user);
-    return <div className="login">
+    return <div className="login" >
         <span className="loginTitle">Login</span>
         <form className="loginForm" onSubmit={handleSubmit}>
             <label>Username</label>

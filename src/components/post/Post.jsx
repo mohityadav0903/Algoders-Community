@@ -1,12 +1,17 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 import './Post.css'
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Post({ post }) {
+    useEffect(()=>{
+        Aos.init({duration:3000})
+    })
     console.log(parse(post.desc))
     const postDesc = parse(post.desc);
-   return <div className='post card '>
+   return <div className='post card ' data-aos="zomm-out">
         {/* {post.photo && <img className='postImg card-img-top img-fluid' src={post.photo} alt=""/>} */}
         <div className="postInfo card-body">
             <div className="postcats">

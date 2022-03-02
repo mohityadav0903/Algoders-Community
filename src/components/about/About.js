@@ -1,9 +1,16 @@
-import React from "react";
+import React ,{ useEffect} from "react";
 import './About.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function About(){
+
+  //adding use effect for scrolling
+  useEffect(()=> {
+    Aos.init({duration:3000});
+  },[]); 
     return (
-       <div>
+       <div data-aos="fade-in">
         <div id="section2 bg-black" >
         <div className="container ">
           <div className="row h-100 align-items-center ">
@@ -31,7 +38,7 @@ function About(){
         </svg>
         <div className="container">
 
-          <div className="row align-items-center mb-5 ">
+          <div className="row align-items-center mb-5 " data-aos="zoom-out-down">
             <div className="col-lg-6  text-center"><i className="fa fa-leaf fa-2x mb-3 text-primary"></i>
               <h2 className="font-weight-light text-white fw-bolder">Upgrade Your Skills</h2>
               <p className="font-italic  mb-4 text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, necessitatibus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, vel suscipit voluptate saepe laboriosam unde fuga dolore obcaecati in, sed voluptatem corporis eligendi! Beatae, labore!</p>
@@ -44,7 +51,7 @@ function About(){
           src="https://bootstrapmade.com/demo/templates/Butterfly/assets/img/hero-img.png" alt="" className="img-fluid mb-4 mb-lg-0" /></div>
           </div>
           
-          <div className="row align-items-center">
+          <div className="row align-items-center" data-aos="zoom-in">
             <div className="col-lg-5 px-5 mx-auto order-2"><img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/hero-img.png" alt=""
                 className="img-fluid mb-4 mb-lg-0 my-3" /></div>
             <div className="col-lg-6 text-center"><i className="fa fa-leaf fa-2x mb-3 text-primary"></i>
