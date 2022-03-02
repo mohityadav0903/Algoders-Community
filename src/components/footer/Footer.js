@@ -8,12 +8,12 @@ import "aos/dist/aos.css";
 
 function Footer() {
     useEffect(()=> {
-        Aos.init({duration:2000})
+        Aos.init({duration:500})
     })
 
     return (
     
-        <div id="footer" className="footer-top bg-black" data-aos="fade-up"> 
+        <div id="footer" className="footer-top bg-black"> 
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#fff"
@@ -25,7 +25,7 @@ function Footer() {
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-lg-3 col-md-6 footer-links">
+                        <div className="col-lg-3 col-md-6 footer-links" data-aos="zoom-in">
                             <h4>Useful Links</h4>
                             <ul>
                                 <li className='font-bold'><i className="fa fa-home"></i> <a href="#">Home</a></li>
@@ -36,7 +36,7 @@ function Footer() {
                             </ul>
                         </div>
 
-                        <div className="col-lg-3 col-md-6 footer-links">
+                        <div className="col-lg-3 col-md-6 footer-links" data-aos="zoom-in">
                             <h4>Our Services</h4>
                             <ul>
                                 <li><i className="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
@@ -47,7 +47,7 @@ function Footer() {
                             </ul>
                         </div>
 
-                        <div className="col-lg-3 col-md-6 footer-links">
+                        <div className="col-lg-3 col-md-6 footer-links" data-aos="zoom-in">
                             <h4>Our Social Networks</h4>
                             <div className="social-links mt-3">
                                 <a href="#" className="facebook" target={'_blank'}><i className=" fab fa-facebook"></i></a>
@@ -56,7 +56,7 @@ function Footer() {
                                 <a href="https://www.instagram.com/askalgoders/" className="instagram" target='_blank'><i className="topIcon fab fa-instagram"></i></a>
                              </div>
                         </div>
-                        <div className="col-lg-3 col-md-6 footer-links">
+                        <div className="col-lg-3 col-md-6 footer-links" data-aos="zoom-in">
                          <img src={Logo} alt="" className='img-fluid w-50'/>
                         </div>
                     </div>

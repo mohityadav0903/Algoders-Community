@@ -7,13 +7,13 @@ function About(){
 
   //adding use effect for scrolling
   useEffect(()=> {
-    Aos.init({duration:3000});
+    Aos.init({duration:1000});
   },[]); 
     return (
-       <div data-aos="fade-in">
+       <div>
         <div id="section2 bg-black" >
         <div className="container ">
-          <div className="row h-100 align-items-center ">
+          <div className="row h-100 align-items-center " data-aos="zoom-in">
             <div className="col-lg-6  text-center ">
               <h1 className="display-4 fw-bold">About us</h1>
               <p className="lead  mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsum, vero quas veniam, amet itaque minima est architecto quaerat non molestiae voluptatum id consequatur harum voluptatibus laborum laudantium illum! Nulla obcaecati quasi ipsam reprehenderit doloremque natus sint rem, dicta et suscipit, cupiditate deserunt facilis, recusandae a quisquam commodi ipsa voluptatibus cumque. Eligendi, error, asperiores facere blanditiis placeat esse eaque quas nisi perspiciatis illum voluptatibus iure eius fugiat, veritatis sed voluptatem aliquid? Et doloribus saepe eligendi alias quidem voluptatum atque commodi!</p>
@@ -38,7 +38,7 @@ function About(){
         </svg>
         <div className="container">
 
-          <div className="row align-items-center mb-5 " data-aos="zoom-out-down">
+          <div className="row align-items-center mb-5 " data-aos="zoom-in-up">
             <div className="col-lg-6  text-center"><i className="fa fa-leaf fa-2x mb-3 text-primary"></i>
               <h2 className="font-weight-light text-white fw-bolder">Upgrade Your Skills</h2>
               <p className="font-italic  mb-4 text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, necessitatibus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, vel suscipit voluptate saepe laboriosam unde fuga dolore obcaecati in, sed voluptatem corporis eligendi! Beatae, labore!</p>

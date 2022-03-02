@@ -4,10 +4,10 @@ import "aos/dist/aos.css";
 
 function Team() {
   useEffect(()=>{
-    Aos.init({duration:3000})
+    Aos.init({duration:500})
   })
   return (
-    <div id="team" data-aos="fade-left">
+    <div id="team" >
     <div className="container">
       <div className="row ">
         <div className=" text-center">
@@ -15,7 +15,7 @@ function Team() {
         </div>
       </div>
 
-      <div className="row text-center">
+      <div className="row text-center" data-aos="zoom-in-up">
         <div className="col-xl-3 col-sm-6 ">
           <div className="rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png"
               alt="" width="100" className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"/>
