@@ -1,13 +1,18 @@
-import React ,{useEffect}from 'react';
+import React ,{useEffect} from 'react';
 import './AlgodersHome.css';
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 
 export default function Home() {
+  useEffect(() => {
+    Aos.init({duration:3000})
+  })
   
     return (
         <div>
              <section id="hero" className="d-flex h-100 ">
-<div className="container ">
+<div className="container " data-aos="flip-left">
   <div className="row">
   <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 text-center mx-auto my-auto ">
             <h1 className="text-center fw-bolder text-white  mx-md-4 mt-4 justify-content-center primetxt"> Welcome to Algoders Community</h1>

@@ -1,8 +1,13 @@
-import React from "react";
+import React,{useEffect} from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Team() {
+  useEffect(()=>{
+    Aos.init({duration:3000})
+  })
   return (
-    <div id="team">
+    <div id="team" data-aos="fade-left">
     <div className="container">
       <div className="row ">
         <div className=" text-center">
