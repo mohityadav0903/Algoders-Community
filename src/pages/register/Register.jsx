@@ -1,5 +1,5 @@
 import "./Register.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { userSchema } from "../../validations/UserValidation";
@@ -13,22 +13,23 @@ export default function Register() {
   const [error, setError] = useState(false);
   const [valid, setValid] = useState(false);
   const [loading, setLoading] = useState(true);
+
   const createUser = async () => {
-  const user = {
+    const user = {
       username,
       password,
       email,
     };
     const isValid = await userSchema.isValid(user);
     setValid(isValid);
-   return isValid;
+    return isValid;
   };
 
   const handelSubmit = async (e) => {
     setError(false);
     e.preventDefault();
     const body = { username, password, email };
-    const isValid =createUser();
+    const isValid = createUser();
     if (isValid) {
       try {
         setLoading(false);
@@ -38,29 +39,42 @@ export default function Register() {
         );
         console.log(response);
         response.data && window.location.replace("/login");
-      }
-      catch (error) {
+      } catch (error) {
         console.log(error);
+        setLoading(true);
         setError(true);
         setLoading(true);
       }
     }
-};
-    return (
-        <div className="register ">
+  };
+  return (
+    <div className="register ">
       <span className="registerTitle">Register</span>
       <form className="registerForm " onSubmit={handelSubmit}>
         <label>Username</label>
-          <input className="registerInput form-control" type="text" placeholder="username"
-          onChange={e=>setUsername(e.target.value)}/>
+        <input
+          className="registerInput form-control"
+          type="text"
+          placeholder="username"
+          onChange={(e) => setUsername(e.target.value)}
+        />
         <label>Email</label>
-          <input className="registerInput form-control" type="text" placeholder="email@email"
-          onChange={e=>setEmail(e.target.value)}/>
+        <input
+          className="registerInput form-control"
+          type="text"
+          placeholder="email@email"
+          onChange={(e) => setEmail(e.target.value)}
+        />
         <label>Password</label>
-          <input className="registerInput form-control" type="password" placeholder="length between 6 and 10 characters "
-        onChange={e=>setPassword(e.target.value)}  />
+        <input
+          className="registerInput form-control"
+          type="password"
+          placeholder="length between 6 and 10 characters "
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
         {loading ? (
-          <SubmitButton className={"registerButton"} Label={"Register"} />
+          <SubmitButton className={"registerButton"} Label={"registerButton"} />
         ) : (
           <SpinnerButton spinnerclass={"registerButton"} />
         )}
