@@ -13,7 +13,7 @@ export default function Home() {
         <div>
              <section id="hero" className="d-flex h-100 ">
 <div className="container " >
-  <div className="row" data-aos="zoom-in" >
+  <div className="row" data-aos="zoom-in">
   <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 text-center mx-auto my-auto ">
             <h1 className="text-center fw-bolder text-white  mx-md-4 mt-4 justify-content-center primetxt"> Welcome to Algoders Community</h1>
             <h2 className=" mx-1 mx-md-4 mb-3 mt-4 text-center text-white shadow-sm" >A Small Place To Learn Code</h2>

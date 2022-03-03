@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 
 function Footer() {
     useEffect(()=> {
-        Aos.init({duration:500})
+        Aos.init({duration:1000})
     })
 
     return (
@@ -25,7 +25,7 @@ function Footer() {
                 <div className="container">
                     <div className="row">
 
-                        <div className="col-lg-3 col-md-6 footer-links" data-aos="zoom-in">
+                        <div className="col-lg-3 col-md-6 footer-links" data-aos="fade-up">
                             <h4>Useful Links</h4>
                             <ul>
                                 <li className='font-bold'><i className="fa fa-home"></i> <a href="#">Home</a></li>

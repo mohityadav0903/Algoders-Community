@@ -1,8 +1,10 @@
-import "./Register.css"
-import { useState } from "react";
+import "./Register.css";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { userSchema } from "../../validations/UserValidation";
+import SubmitButton from "../../components/buttons/SubmitButton";
+import SpinnerButton from "../../components/buttons/SpinnerButton";
 
 export default function Register() {
   const [username, setUsername] = useState("");
@@ -10,7 +12,7 @@ export default function Register() {
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
   const [valid, setValid] = useState(false);
-
+  const [loading, setLoading] = useState(true);
   const createUser = async () => {
   const user = {
       username,
@@ -29,13 +31,18 @@ export default function Register() {
     const isValid =createUser();
     if (isValid) {
       try {
-        const response = await axios.post('https://algo-backend.herokuapp.com/api/auth/register', body);
+        setLoading(false);
+        const response = await axios.post(
+          "https://algo-backend.herokuapp.com/api/auth/register",
+          body
+        );
         console.log(response);
         response.data && window.location.replace("/login");
       }
       catch (error) {
         console.log(error);
         setError(true);
+        setLoading(true);
       }
     }
 };
@@ -52,12 +59,20 @@ export default function Register() {
         <label>Password</label>
           <input className="registerInput form-control" type="password" placeholder="length between 6 and 10 characters "
         onChange={e=>setPassword(e.target.value)}  />
-        <button className="registerButton">Register</button>
+        {loading ? (
+          <SubmitButton className={"registerButton"} Label={"Register"} />
+        ) : (
+          <SpinnerButton spinnerclass={"registerButton"} />
+        )}
       </form>
-        <button className="registerLoginButton" type="submit">
-          <Link to="/login" className="link">Login</Link>
-        </button>
-        {error && <p className="registerError">Username or email already exists</p>}
-     </div>
-    )
+      <button className="registerLoginButton" type="submit">
+        <Link to="/login" className="link">
+          Login
+        </Link>
+      </button>
+      {error && (
+        <p className="registerError">Username or email already exists</p>
+      )}
+    </div>
+  );
 }

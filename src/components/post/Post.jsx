@@ -11,7 +11,7 @@ function Post({ post }) {
     })
     console.log(parse(post.desc))
     const postDesc = parse(post.desc);
-   return <div className='post card ' data-aos="zomm-out">
+   return <div className='post card ' data-aos="zoom-out">
         {/* {post.photo && <img className='postImg card-img-top img-fluid' src={post.photo} alt=""/>} */}
         <div className="postInfo card-body">
             <div className="postcats">

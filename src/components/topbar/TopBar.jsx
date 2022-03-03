@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import { useLocation } from 'react-router-dom';
 import TopbarDropDown from '../topbarDropDown/TopbarDropDown';
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 import './TopBar.css'
 
 
 const TopBar = () => {
-  
+  useEffect(()=> {
+    Aos.init({duration:1000})
+})
   const { user,dispatch } = useContext(Context);
     const {pathname} = useLocation();
     

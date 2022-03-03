@@ -13,22 +13,22 @@ function About(){
        <div>
         <div id="section2 bg-black" >
         <div className="container ">
-          <div className="row h-100 align-items-center " data-aos="zoom-in">
-            <div className="col-lg-6  text-center ">
+          <div className="row h-100 align-items-center ">
+            <div className="col-lg-6  text-center "  data-aos="fade-up">
               <h1 className="display-4 fw-bold">About us</h1>
               <p className="lead  mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsum, vero quas veniam, amet itaque minima est architecto quaerat non molestiae voluptatum id consequatur harum voluptatibus laborum laudantium illum! Nulla obcaecati quasi ipsam reprehenderit doloremque natus sint rem, dicta et suscipit, cupiditate deserunt facilis, recusandae a quisquam commodi ipsa voluptatibus cumque. Eligendi, error, asperiores facere blanditiis placeat esse eaque quas nisi perspiciatis illum voluptatibus iure eius fugiat, veritatis sed voluptatem aliquid? Et doloribus saepe eligendi alias quidem voluptatum atque commodi!</p>
               <p className="lead ">To know more <a href="#" className="text-black">
                   < button className="btn btn-primary rounded-pill text-black">Click here</button></a>
               </p>
             </div>
-            <div className="col-lg-6 d-lg-block"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt=""
+            <div className="col-lg-6 d-lg-block"  data-aos="zoom-in"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt=""
                 className="img-fluid "/></div>
           </div>
           
         </div>
       </div>
     
-      <div className="bg-black  ">
+      <div className="bg-black  " data-aos="fade-up">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="#f2f6fc"
@@ -38,21 +38,21 @@ function About(){
         </svg>
         <div className="container">
 
-          <div className="row align-items-center mb-5 " data-aos="zoom-in-up">
-            <div className="col-lg-6  text-center"><i className="fa fa-leaf fa-2x mb-3 text-primary"></i>
+          <div className="row align-items-center mb-5 ">
+            <div className="col-lg-6  text-center" ><i className="fa fa-leaf fa-2x mb-3 text-primary"></i>
               <h2 className="font-weight-light text-white fw-bolder">Upgrade Your Skills</h2>
               <p className="font-italic  mb-4 text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, necessitatibus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, vel suscipit voluptate saepe laboriosam unde fuga dolore obcaecati in, sed voluptatem corporis eligendi! Beatae, labore!</p>
               
               <a href="#"
                 className="btn btn-light px-3 rounded-pill shadow-sm">Learn More</a>
             </div>
-            <div className="col-lg-5 px-5 mx-auto order-sm-first my-3"><img
+            <div className="col-lg-5 px-5 mx-auto order-sm-first my-3" data-aos="fade-left"><img
              
           src="https://bootstrapmade.com/demo/templates/Butterfly/assets/img/hero-img.png" alt="" className="img-fluid mb-4 mb-lg-0" /></div>
           </div>
           
-          <div className="row align-items-center" data-aos="zoom-in">
-            <div className="col-lg-5 px-5 mx-auto order-2"><img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/hero-img.png" alt=""
+          <div className="row align-items-center">
+            <div className="col-lg-5 px-5 mx-auto order-2" data-aos="fade-right"><img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/hero-img.png" alt=""
                 className="img-fluid mb-4 mb-lg-0 my-3" /></div>
             <div className="col-lg-6 text-center"><i className="fa fa-leaf fa-2x mb-3 text-primary"></i>
               <h2 className="font-weight-light text-white fw-bolder">Transformation to Tech world</h2>
