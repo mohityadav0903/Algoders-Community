@@ -43,6 +43,7 @@ export default function Register() {
         console.log(error);
         setLoading(true);
         setError(true);
+        setLoading(true);
       }
     }
   };

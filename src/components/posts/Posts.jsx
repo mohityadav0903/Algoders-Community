@@ -28,7 +28,7 @@ const Posts = () => {
         posts.map((post) => <Post key={post._id} post={post} />)
       ) : (
         <div className="puffLoader">
-          <Puff color="#2D81F7" height={75} width={75} className="loader" />
+          <Puff color="#2D81F7" height={100} width={100} className="loader" />
         </div>
       )}
     </div>

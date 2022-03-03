@@ -2,11 +2,15 @@
   "name": "react_blog_app",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "@tinymce/tinymce-react": "^3.13.0",
+    "aos": "^2.3.4",
     "axios": "^0.25.0",
     "firebase": "^9.6.5",
     "html-react-parser": "^1.4.8",
@@ -15,8 +19,10 @@
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-scroll": "^1.8.5",
     "web-vitals": "^2.1.4",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "react-loader-spinner": "^6.0.0-0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -46,7 +52,6 @@
     "autoprefixer": "^10.4.2",
     "install": "^0.13.0",
     "npm": "^8.4.0",
-    "postcss": "^8.4.5",
-    "react-loader-spinner": "^6.0.0-0"
+    "postcss": "^8.4.5"
   }
 }

@@ -1,11 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext,useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import { Context } from '../../context/Context';
 import { useLocation } from 'react-router-dom';
 import TopbarDropDown from '../topbarDropDown/TopbarDropDown';
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 import './TopBar.css'
+
+
 const TopBar = () => {
+  useEffect(()=> {
+    Aos.init({duration:1000})
+})
   const { user,dispatch } = useContext(Context);
     const {pathname} = useLocation();
     
@@ -47,7 +53,7 @@ const TopBar = () => {
 //         </div>
 //   </div>;
 <>
-<nav className="navbar navbar-expand-lg navbar-light bg-black sticky-top text-white py-1 top flex d-flex">
+<nav className="navbar navbar-expand-lg navbar-light bg-black sticky-top text-white py-1 top flex d-flex" >
   <div className="container-fluid  ">
       {user ? (<div className=' user'>
                  <Link to="/settings" className='link '>{user.profilePic ? <img className='topImg' src={user.profilePic} alt="" /> : <img className='topImg' src="https://th.bing.com/th/id/OIP.MLqa_eaUsAEh0ah2feV2swAAAA?w=149&h=169&c=7&r=0&o=5&dpr=1.25&pid=1.7" alt="" />}

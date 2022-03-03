@@ -1,10 +1,11 @@
-import React from "react";
-import Posts from "../posts/Posts";
-import "./Blogs.css";
+import React from 'react';
+import Posts from '../posts/Posts';
+import './Blogs.css'
+
 
 const Blogs = () => {
   return (
-    <div className="blogs">
+    <div className="blogs ">
       <Posts />
     </div>
   );
