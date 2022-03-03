@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useContext, useRef, useState, useEffect } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 import "./Login.css";
@@ -13,12 +13,9 @@ const Login = () => {
   const [loading, setLoading] = useState(true);
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(false);
-    setTimeout(() => {
-      setLoading(true);
-    }, 2000);
     dispatch({ type: "LOGIN_START" });
     try {
+      setLoading(false);
       const res = await axios.post(
         "https://algo-backend.herokuapp.com/api/auth/login",
         {
@@ -29,6 +26,7 @@ const Login = () => {
       dispatch({ type: "LOGIN_SUCCESS", payload: res.data });
     } catch (err) {
       dispatch({ type: "LOGIN_FAILURE" });
+      setLoading(true);
     }
   };
 

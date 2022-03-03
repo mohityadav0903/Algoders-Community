@@ -1,5 +1,5 @@
 import "./Register.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { userSchema } from "../../validations/UserValidation";
@@ -33,9 +33,6 @@ export default function Register() {
     if (isValid) {
       try {
         setLoading(false);
-        setTimeout(() => {
-          setLoading(true);
-        }, 2000);
         const response = await axios.post(
           "https://algo-backend.herokuapp.com/api/auth/register",
           body
@@ -44,6 +41,7 @@ export default function Register() {
         response.data && window.location.replace("/login");
       } catch (error) {
         console.log(error);
+        setLoading(true);
         setError(true);
       }
     }
