@@ -8,8 +8,8 @@ function About(){
         <div className="container ">
           <div className="row h-100 align-items-center ">
             <div className="col-lg-6  text-center ">
-              <h1 className="display-4 fw-bold">About us</h1>
-              <p className="lead  mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsum, vero quas veniam, amet itaque minima est architecto quaerat non molestiae voluptatum id consequatur harum voluptatibus laborum laudantium illum! Nulla obcaecati quasi ipsam reprehenderit doloremque natus sint rem, dicta et suscipit, cupiditate deserunt facilis, recusandae a quisquam commodi ipsa voluptatibus cumque. Eligendi, error, asperiores facere blanditiis placeat esse eaque quas nisi perspiciatis illum voluptatibus iure eius fugiat, veritatis sed voluptatem aliquid? Et doloribus saepe eligendi alias quidem voluptatum atque commodi!</p>
+              <h1 className="display-4 fw-bold  wow animate__animated animate__fadeInDown ">About us</h1>
+              <p className="lead  mb-0 wow animate__animated animate__slideInLeft ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi ipsum, vero quas veniam, amet itaque minima est architecto quaerat non molestiae voluptatum id consequatur harum voluptatibus laborum laudantium illum! Nulla obcaecati quasi ipsam reprehenderit doloremque natus sint rem, dicta et suscipit, cupiditate deserunt facilis, recusandae a quisquam commodi ipsa voluptatibus cumque. Eligendi, error, asperiores facere blanditiis placeat esse eaque quas nisi perspiciatis illum voluptatibus iure eius fugiat, veritatis sed voluptatem aliquid? Et doloribus saepe eligendi alias quidem voluptatum atque commodi!</p>
               <p className="lead ">To know more <a href="#" className="text-black">
                   < button className="btn btn-primary rounded-pill text-black">Click here</button></a>
               </p>
@@ -39,13 +39,13 @@ function About(){
               <a href="#"
                 className="btn btn-light px-3 rounded-pill shadow-sm">Learn More</a>
             </div>
-            <div className="col-lg-5 px-5 mx-auto order-sm-first my-3"><img
+            <div className="col-lg-5 px-5 mx-auto order-sm-first    my-3  wow animate__animated animate__zoomIn "><img
              
           src="https://bootstrapmade.com/demo/templates/Butterfly/assets/img/hero-img.png" alt="" className="img-fluid mb-4 mb-lg-0" /></div>
           </div>
           
           <div className="row align-items-center">
-            <div className="col-lg-5 px-5 mx-auto order-2"><img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/hero-img.png" alt=""
+            <div className="col-lg-5 px-5 mx-auto order-2  wow animate__animated animate__zoomIn "><img src="https://bootstrapmade.com/demo/templates/FlexStart/assets/img/hero-img.png" alt=""
                 className="img-fluid mb-4 mb-lg-0 my-3" /></div>
             <div className="col-lg-6 text-center"><i className="fa fa-leaf fa-2x mb-3 text-primary"></i>
               <h2 className="font-weight-light text-white fw-bolder">Transformation to Tech world</h2>

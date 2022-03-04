@@ -13,18 +13,18 @@ function Join() {
     <div className="container">
     <div className="row my-3 ">
     <div className=" text-center">
-      <h2 className="display-4 fw-bold text-white">Join Us As A Mentor</h2>
+      <h2 className="display-4 fw-bold text-white ">Join Us As A Mentor</h2>
     </div>
   </div>
     <div className="row align-items-center mb-5 ">
-            <div className="col-lg-6  text-center"><i className="fa fa-leaf fa-2x mb-3 text-primary"></i>
-              <h2 className="font-weight-light text-white fw-bolder">What You Can Get ?</h2>
-              <p className="font-italic  mb-4 text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, necessitatibus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, vel suscipit voluptate saepe laboriosam unde fuga dolore obcaecati in, sed voluptatem corporis eligendi! Beatae, labore!</p>
+            <div className="col-lg-6  text-center "><i className="fa fa-leaf fa-2x mb-3 text-primary wow animate__animated animate__zoomIn  "></i>
+              <h2 className="font-weight-light text-white fw-bolder   wow animate__animated animate__slideInRight">What You Can Get ?</h2>
+              <p className="font-italic  mb-4 text-primary  wow animate__animated animate__slideInRight ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, necessitatibus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, vel suscipit voluptate saepe laboriosam unde fuga dolore obcaecati in, sed voluptatem corporis eligendi! Beatae, labore!</p>
               
               <button href="#"
                 className="btn btn-light px-3 rounded-pill shadow-sm">Apply Here</button>
             </div>
-            <div className="col-lg-5 px-5 mx-auto order-sm-first my-3"><img
+            <div className="col-lg-5 px-5 mx-auto order-sm-first my-3  wow animate__animated animate__zoomIn "><img
              
           src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/counts-img.svg" alt="" className="img-fluid mb-4 mb-lg-0" /></div>
           </div>

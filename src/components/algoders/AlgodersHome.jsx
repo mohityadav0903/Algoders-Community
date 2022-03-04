@@ -5,17 +5,19 @@ export default function Home() {
     return (
         <div>
              <section id="hero" className="d-flex h-100 ">
-<div className="container ">
+                 {/* adding scroll animations with animate.css*/}
+<div className="container  ">
   <div className="row">
   <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1 text-center mx-auto my-auto ">
-            <h1 className="text-center fw-bolder text-white  mx-md-4 mt-4 justify-content-center primetxt"> Welcome to Algoders Community</h1>
-            <h2 className=" mx-1 mx-md-4 mb-3 mt-4 text-center text-white shadow-sm" >A Small Place To Learn Code</h2>
-                     <div className="d-flex justify-content-center mx-4 mb-lg-4 mb-2">
-              <a > <button  className="btn btn-primary btn-lg text-white get-started">Get started <i
+            <h1 className="text-center fw-bolder text-white  mx-md-4 mt-4 justify-content-center primetxt  animate__animated animate__slideInLeft"> Welcome to Algoders Community</h1> 
+          
+            <h2 className=" mx-1 mx-md-4 mb-3 mt-4 text-center text-white shadow-sm   animate__animated animate__slideInLeft " >A Small Place To Learn Code</h2>
+                     <div className="d-flex justify-content-center mx-4 mb-lg-4 mb-2  animate__animated animate__zoomIn ">
+              <a > <button  className="btn btn-primary btn-lg text-white get-started  ">Get started <i
                     className="fas fa-arrow-circle-right"></i> </button> </a>
             </div>
           </div>
-    <div className="col-lg-6 order-1 order-lg-2 hero-img  text-center" data-aos="zoom-in" data-aos-delay="200">
+    <div className="col-lg-6 order-1 order-lg-2 hero-img  text-center   " data-aos="zoom-in" data-aos-delay="200">
       <img src="https://bootstrapmade.com/demo/templates/Arsha/assets/img/hero-img.png" className="img-fluid animated" alt=""/>
     </div>
   </div>

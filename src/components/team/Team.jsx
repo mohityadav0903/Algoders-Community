@@ -12,7 +12,7 @@ function Team() {
 
       <div className="row text-center">
         <div className="col-xl-3 col-sm-6 ">
-          <div className="rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png"
+          <div className="rounded shadow-sm py-5 px-4 wow animate__animated animate__zoomIn "><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png"
               alt="" width="100" className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"/>
             <h5 className="mb-0">Test Name</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
             <ul className="social">
@@ -24,7 +24,7 @@ function Team() {
           </div>
         </div>
         <div className="col-xl-3 col-sm-6">
-          <div className=" rounded shadow-sm py-5 px-4"><img
+          <div className=" rounded shadow-sm py-5 px-4 wow animate__animated animate__zoomIn "><img
               src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png" alt="" width="100"
               className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"/>
             <h5 className="mb-0">Test Name</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
@@ -37,7 +37,7 @@ function Team() {
           </div>
         </div>
         <div className="col-xl-3 col-sm-6 ">
-          <div className=" rounded shadow-sm py-5 px-4"><img
+          <div className=" rounded shadow-sm py-5 px-4  wow animate__animated animate__zoomIn"><img
               src="https://bootstrapious.com/i/snippets/sn-about/avatar-2.png" alt="" width="100"
               className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"/>
             <h5 className="mb-0">Test Name</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
@@ -52,7 +52,7 @@ function Team() {
 
     
         <div className="col-xl-3 col-sm-6">
-          <div className=" rounded shadow-sm py-5 px-4"><img
+          <div className=" rounded shadow-sm py-5 px-4 wow animate__animated animate__zoomIn "><img
               src="https://bootstrapious.com/i/snippets/sn-about/avatar-1.png" alt="" width="100"
               className="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm"/>
             <h5 className="mb-0">Test Name</h5><span className="small text-uppercase text-muted">CEO - Founder</span>
