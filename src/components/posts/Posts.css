@@ -4,3 +4,31 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+a:hover{ 
+    text-decoration: none;
+}
+.AllBlog{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin: 10px 0 0;
+}
+.Blog-But{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 15px;
+    font-weight:bolder;
+    font-size: 20px;
+    background-color: white;
+}
+.Blog-But:active{
+    position: relative;
+    top:4px;
+    box-shadow: none;
+}
+.Arrow{
+    font-size: 30px;
+    margin: 4px 0 0;
+    font-weight:bolder;
+}

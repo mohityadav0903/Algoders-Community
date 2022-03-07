@@ -1,63 +1,78 @@
+.login-container {
+  background-color: black;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
 .login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-   background-color: black;
-  }
-  
-  .loginTitle {
-    font-size: 50px;
-    color: white;
-  }
-  
-  .loginForm {
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .loginForm > label {
-    margin: 10px 0;
-    color: white;
-  }
-  
-  .loginInput {
-    padding: 10px;
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-  }
-  
-  .loginInput:focus {
-    outline: none;
-  }
-  
-  .loginButton {
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: lightcoral;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    text-align: center;
-  }
-
-
-  .loginButton:disabled{
-    cursor: not-allowed;
-    background-color: rgb(255, 214, 199);
-  }
-  
-  .loginRegisterButton {
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    background-color: teal;
-    cursor: pointer;
-    padding: 10px;
-    border: none;
-    color: white;
-    border-radius: 10px;
-  }
+  text-align: center;
+  width: 450px;
+}
+.login-title {
+  color: white;
+  font-size: 30px;
+}
+.login-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.input {
+  width: 100%;
+  line-height: 2.5;
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1.5px solid gray;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+}
+.input:focus {
+  background-color: transparent;
+  border: 1.5px solid #0b5ed7;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+.input-password {
+  position: relative;
+}
+.input-container i {
+  position: absolute;
+  margin-right: 4px;
+  width: 37px;
+  padding: 3px;
+}
+.form-text {
+  text-align: left;
+}
+.login-footer p {
+  font-size: 18px;
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: rgb(189, 189, 189);
+}
+.login-error {
+  margin-top: 10px;
+}
+.login-footer p a {
+  font-weight: 600;
+}
+.login-button {
+  padding: 10px;
+  width: 150px;
+  border: none;
+  background-color: #0b5ed7;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 15px;
+}
