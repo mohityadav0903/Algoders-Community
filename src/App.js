@@ -12,7 +12,7 @@ import Write from "./pages/write/Write";
 import Settings from "./pages/settings/Settings";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
-
+import Mentor from "./components/joinus/Mentor";
 import { Routes, Route } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { Context } from "./context/Context";   //header<about us<images<footer
@@ -38,6 +38,7 @@ function App() {
         <Route path='/login' element={user?<Home/>:<Login />} />
         <Route path='/register' element={user ? <Home/>:<Register />} />
         <Route path='/contact' element={ <Contact/> } />
+        <Route path='/Mentor' element={ <Mentor/> } />
       </Routes>
       
       <Footer/>
