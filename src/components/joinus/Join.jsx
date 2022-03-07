@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import Aos from "aos";
 import "aos/dist/aos.css";
-
+import { Link } from 'react-router-dom';
+import Mentor from './Mentor';
 function Join() {
   useEffect(()=>{
     Aos.init({duration:1000})
@@ -26,8 +27,8 @@ function Join() {
               <h2 className="font-weight-light text-white fw-bolder">What You Can Get ?</h2>
               <p className="font-italic  mb-4 text-primary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, necessitatibus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, vel suscipit voluptate saepe laboriosam unde fuga dolore obcaecati in, sed voluptatem corporis eligendi! Beatae, labore!</p>
               
-              <button href="#"
-                className="btn btn-light px-3 rounded-pill shadow-sm">Apply Here</button>
+             <Link to="/Mentor" ><button href="#"
+                className="btn btn-light px-3 rounded-pill shadow-sm">Apply Here</button></Link>
             </div>
             <div className="col-lg-5 px-5 mx-auto order-sm-first my-3" data-aos="flip-left"><img
              
