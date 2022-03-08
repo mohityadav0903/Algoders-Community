@@ -4,7 +4,7 @@ import TopBar from "./components/topbar/TopBar";
 import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/contact";
 import Blogs from "./components/blogs/Blogs";
-
+import ContactSection from "./components/contactSection/ContactSection";
 
 
 import SinglePostPage from "./pages/singlePost/SinglePostPage";
@@ -40,7 +40,7 @@ function App() {
         <Route path='/contact' element={ <Contact/> } />
         <Route path='/Mentor' element={ <Mentor/> } />
       </Routes>
-      
+      <ContactSection/>
       <Footer/>
       
 
