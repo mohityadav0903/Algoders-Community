@@ -65,11 +65,11 @@ function Contacts(){
                         d="M0,224L48,218.7C96,213,192,203,288,213.3C384,224,480,256,576,229.3C672,203,768,117,864,112C960,107,1056,181,1152,192C1248,203,1344,149,1392,122.7L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                 </svg>
             </div>
-        <section id="contact" className="section-padding ">
+        <section id="contact" className="section-padding updated-section">
             <div className="container">
 
                 <div className="section-header text-center">
-                    <h2 className="section-title wow fadeInDown text-black" data-wow-delay="0.3s">Contact Us</h2>
+                    <h2 className="section-title wow fadeInDown text-black display-4 fw-bold updated-heading" data-wow-delay="0.3s">Contact Us</h2>
                     <div className="shape wow fadeInDown" data-wow-delay="0.3s"></div>
                 </div>
                 <div className="row contact-form-area wow fadeInUp" data-wow-delay="0.3s">
@@ -112,7 +112,7 @@ function Contacts(){
                                     </div>
                                     <div className="submit-button text-left">
 
-                                        <button className="fluid ui blue button" id="Submit">Send Message</button>
+                                        <button className="fluid ui blue button updated-button" id="Submit">Send Message</button>
                                         <div className="clearfix"></div>
                                     </div>
                                 </div>

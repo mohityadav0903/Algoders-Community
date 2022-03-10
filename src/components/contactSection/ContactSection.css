@@ -69,7 +69,23 @@ textarea{
        width: 40px;
    }
 
- 
+.updated-section{
+    margin:27px !important;
+}
+.updated-heading{
+    margin: 20px !important;
+}
+.updated-button{
+    width: 100% !important;
+    padding: 12px !important;
+    background-color: #3c6efd !important;
+    color: black !important;
+    font-weight: bold !important;
+    border-radius: 12px !important;
+    outline: none !important;
+    border: none !important;
+    margin-bottom: 12px !important;
+}
 .footer-titel{
    font-size: 1.7rem;
 margin-bottom: 39px;
