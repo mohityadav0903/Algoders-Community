@@ -69,7 +69,7 @@ function Contacts(){
             <div className="container">
 
                 <div className="section-header text-center">
-                    <h2 className="section-title wow fadeInDown text-black updated-heading" data-wow-delay="0.3s">Contact Us</h2>
+                    <h2 className="section-title wow fadeInDown text-black display-4 fw-bold" data-wow-delay="0.3s">Contact Us</h2>
                     <div className="shape wow fadeInDown" data-wow-delay="0.3s"></div>
                 </div>
                 <div className="row contact-form-area wow fadeInUp" data-wow-delay="0.3s">
