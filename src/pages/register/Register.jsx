@@ -3,17 +3,28 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { userSchema } from "../../validations/UserValidation";
-import SubmitButton from "../../components/buttons/SubmitButton";
-import SpinnerButton from "../../components/buttons/SpinnerButton";
+
+const initialInputData = {
+  username: "",
+  email: "",
+  password: "",
+};
 
 export default function Register() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [error, setError] = useState(false);
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [error, setError] = useState(null);
   const [valid, setValid] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [inputData, setInputData] = useState(initialInputData);
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setInputData({
+      ...inputData,
+      [name]: value,
+    });
+  };
 
+  const { username, email, password } = inputData;
   const createUser = async () => {
     const user = {
       username,
@@ -26,67 +37,99 @@ export default function Register() {
   };
 
   const handelSubmit = async (e) => {
-    setError(false);
     e.preventDefault();
-    const body = { username, password, email };
+    const body = { username, email, password };
     const isValid = createUser();
+    setLoading(true);
     if (isValid) {
+      setLoading(true);
       try {
-        setLoading(false);
         const response = await axios.post(
           "https://algo-backend.herokuapp.com/api/auth/register",
           body
         );
         console.log(response);
         response.data && window.location.replace("/login");
+        setLoading(false);
       } catch (error) {
-        console.log(error);
-        setLoading(true);
-        setError(true);
-        setLoading(true);
+        setLoading(false);
+        const { status } = error.response;
+        if (status === 422) {
+          setError("Please fill all the required inforamtion");
+        } else if (password.length <= 7) {
+          setError("Password must be greater than 8 char");
+        } else if (status === 409) {
+          setError("User already exists");
+        } else {
+          setError("Something went wrong");
+        }
       }
     }
   };
-  return (
-    <div className="register ">
-      <span className="registerTitle">Register</span>
-      <form className="registerForm " onSubmit={handelSubmit}>
-        <label>Username</label>
-        <input
-          className="registerInput form-control"
-          type="text"
-          placeholder="username"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <label>Email</label>
-        <input
-          className="registerInput form-control"
-          type="text"
-          placeholder="email@email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label>Password</label>
-        <input
-          className="registerInput form-control"
-          type="password"
-          placeholder="length between 6 and 10 characters "
-          onChange={(e) => setPassword(e.target.value)}
-        />
 
-        {loading ? (
-          <SubmitButton className={"registerButton"} Label={"registerButton"} />
-        ) : (
-          <SpinnerButton spinnerclass={"registerButton"} />
-        )}
-      </form>
-      <button className="registerLoginButton" type="submit">
-        <Link to="/login" className="link">
-          Login
-        </Link>
-      </button>
-      {error && (
-        <p className="registerError">Username or email already exists</p>
-      )}
+  return (
+    <div className="register-container">
+      <div className="register" onSubmit={handelSubmit}>
+        <h1 className="register-title">Register</h1>
+        <form className="register-form">
+          <input
+            className="input"
+            name="username"
+            type="text"
+            placeholder="Username*"
+            onChange={handleInputChange}
+          />
+          <input
+            className="input"
+            name="email"
+            type="email"
+            placeholder="Email*"
+            onChange={handleInputChange}
+          />
+          <div className="input-container">
+            <input
+              className="input input-password"
+              name="password"
+              type={passwordVisible ? "text" : "password"}
+              placeholder="Password*"
+              onChange={handleInputChange}
+            />
+            {passwordVisible ? (
+              <i
+                class="fa-regular fa-eye"
+                onClick={() => {
+                  setPasswordVisible(!passwordVisible);
+                }}
+              ></i>
+            ) : (
+              <i
+                class="fa-regular fa-eye-slash"
+                onClick={() => {
+                  setPasswordVisible(!passwordVisible);
+                }}
+              ></i>
+            )}
+          </div>
+          <div className="register-footer">
+            <div className="form-text">
+              <p>
+                Already have an account? <Link to="/login">Login</Link>
+              </p>
+              {error && <p className="register-error">{error}</p>}
+            </div>
+
+            {loading ? (
+              <button className="register-button" type="submit">
+                Loading...
+              </button>
+            ) : (
+              <button className="register-button" type="submit">
+                Register
+              </button>
+            )}
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
