@@ -14,7 +14,11 @@ function Footer() {
     return (
     
  
+
         <div id="footer" className="footer-top" style={{background:"#FFF"}}>
+
+        <div id="footer" className="footer-top bg-black">
+
                <div className="footer-top">
                 <div className="container">
                     <div className="row">
