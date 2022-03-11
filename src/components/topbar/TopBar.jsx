@@ -52,7 +52,11 @@ const TopBar = () => {
     //         </div>
     //   </div>;
     <>
+
+      <nav className="navbar navbar-expand-lg navbar-light sticky-top text-white py-1 top flex d-flex" style={{background:"#001329"}}>
+
       <nav className="navbar navbar-expand-lg navbar-light bg-black sticky-top text-white py-1 top flex d-flex">
+
         <div className="container-fluid  ">
           {user ? (
             <div className=" user">

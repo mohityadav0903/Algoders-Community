@@ -57,7 +57,11 @@ function Contacts(){
     };
     return (
     <>
+
+        <div id="footer" className="footer-top" style={{background:"#001329"}}>
+
         <div id="footer" className="footer-top bg-black">
+
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path
                         fill="#fff"
@@ -67,6 +71,9 @@ function Contacts(){
             </div>
         <section id="contact" className="section-padding updated-section">
             <div className="container">
+
+
+
 
                 <div className="section-header text-center">
                     <h2 className="section-title wow fadeInDown text-black display-4 fw-bold updated-heading" data-wow-delay="0.3s">Contact Us</h2>
