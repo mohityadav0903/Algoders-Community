@@ -1,8 +1,8 @@
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
-import Card from "./components/cards/Card";
-// import Home from "./components/algoders/Home";
-// import TopBar from "./components/topbar/TopBar";
+// import Card from "./components/cards/Card";
+import Home from "./components/algoders/Home";
+import TopBar from "./components/topbar/TopBar";
 import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/contact";
 import Blogs from "./components/blogs/Blogs";
@@ -24,7 +24,7 @@ function App() {
   const { user } = useContext(Context);
   return (
     <div>
-      {/* <TopBar />  */}
+      <TopBar /> 
       {/* <Home/> */}
       
     <Routes>
@@ -40,7 +40,7 @@ function App() {
         <Route exact path='/contact' element={ <Contact/> } />
       </Routes>
       
-      {/* <Footer/> */}
+      <Footer/>
       
 
        </div>
