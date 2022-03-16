@@ -1,7 +1,7 @@
 import Home from "./pages/home/Home";
 import About from "./pages/about/About";
 // import Card from "./components/cards/Card";
-import Home from "./components/algoders/Home";
+
 import TopBar from "./components/topbar/TopBar";
 import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/contact";
