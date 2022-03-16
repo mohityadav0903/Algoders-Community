@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-// import Aos from "aos";
-// import "aos/dist/aos.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Join() {
-  // useEffect(()=>{
-  //   Aos.init({duration:1000})
-  // })
+  useEffect(()=>{
+    Aos.init({duration:1000})
+  })
   return (
     <div className='bg-black' data-aos="fade-up">
            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
