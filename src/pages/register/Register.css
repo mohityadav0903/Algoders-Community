@@ -1,14 +1,25 @@
 .register-container {
+
+  background-color: #001329;
+
   background-color: black;
+
   display: flex;
   height: 80vh;
   justify-content: center;
   align-items: center;
+
 }
 .register {
   text-align: center;
   width: 450px;
 }
+
+.register {
+  text-align: center;
+  width: 450px;
+}
+
 .register-title {
   color: white;
   font-size: 30px;
@@ -40,10 +51,16 @@
   align-items: center;
   justify-content: end;
   width: 100%;
+
 }
 .input-password {
   position: relative;
 }
+
+.input-password {
+  position: relative;
+}
+
 .input-container i {
   position: absolute;
   margin-right: 4px;

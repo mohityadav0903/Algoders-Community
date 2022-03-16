@@ -14,7 +14,11 @@ function Footer() {
     return (
     
  
+
+        <div id="footer" className="footer-top" style={{background:"#FFF"}}>
+
         <div id="footer" className="footer-top bg-black">
+
                <div className="footer-top">
                 <div className="container">
                     <div className="row">
@@ -57,7 +61,7 @@ function Footer() {
                 </div>
             </div>
             <div className="container  footer-bottom clearfix">
-                <div className="copyright">
+                <div className="copyright" style={{color:"#000"}}>
                     &copy; Copyright <strong><span>ALGODERS</span></strong>. All Rights Reserved
                 </div>
                 </div>

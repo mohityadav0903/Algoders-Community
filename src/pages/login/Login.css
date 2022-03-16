@@ -1,5 +1,9 @@
 .login-container {
+
+  background-color: #001329;
+
   background-color: black;
+
   display: flex;
   height: 80vh;
   justify-content: center;
