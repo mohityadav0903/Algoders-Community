@@ -1,0 +1,17 @@
+.heading1{
+    color: white;
+    background-color:rgba(24,23,22);
+    display:flex;
+    justify-content: space-around;
+    font-size: 48px;
+}
+.one{
+    background-color: rgba(24,23,22);
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.two{
+    padding-top:3em;
+}
