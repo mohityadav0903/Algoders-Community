@@ -60,8 +60,6 @@ function Contacts(){
 
         <div id="footer" className="footer-top" style={{background:"#001329"}}>
 
-        <div id="footer" className="footer-top bg-black">
-
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                     <path
                         fill="#fff"
