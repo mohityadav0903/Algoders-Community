@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from 'react-router-dom';
+import {FaDiscord ,FaTelegram ,FaLinkedin,FaGithub,FaTwitter,FaYoutube} from "react-icons/fa";
 import Mentor from './Mentor';
+
 function Join() {
   useEffect(()=>{
     Aos.init({duration:1000})
@@ -26,66 +28,66 @@ function Join() {
             <div className="col-lg-6  text-center" data-aos="fade-up"><i className="fa fa-leaf fa-2x mb-3 text-primary"></i>
               <h2 className="font-weight-light text-white fw-bolder">What You Can Get ?</h2>
               <p className="font-italic" style={{color:"#FFF"}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, necessitatibus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque, vel suscipit voluptate saepe laboriosam unde fuga dolore obcaecati in, sed voluptatem corporis eligendi! Beatae, labore!</p>
-              
+
              <Link to="/Mentor" ><button href="#"
                 className="btn btn-light px-3 rounded-pill shadow-sm">Apply Here</button></Link>
             </div>
             <div className="col-lg-5 px-5 mx-auto order-sm-first my-3" data-aos="flip-left"><img
-             
+
           src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/counts-img.svg" alt="" className="img-fluid mb-4 mb-lg-0" /></div>
           </div>
        <div className="row" data-aos="fade-down">
   <div className="col-sm-4 my-3">
     <div className="card text-center">
       <div className="card-body">
-        <h5 className="card-title">Special title treatment</h5>
-        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <button href="#" className="btn btn-primary text-white ">Go somewhere</button>
+        <div href="#" style={{color:"#FF0000" ,fontSize:"3em"}} ><FaDiscord /></div>
+        <h5  className="card-title" href="#">DISCORD SERVER</h5>
+        <p className="card-text">Join the community on Discord for the interaction with students from all over the India.</p>
       </div>
     </div>
   </div>
   <div className="col-sm-4 my-3">
     <div className="card text-center">
       <div className="card-body">
-        <h5 className="card-title">Special title treatment</h5>
-        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <button href="#" className="btn btn-primary text-white ">Go somewhere</button>
+      <div href="#"  style={{color:"#FF0000" ,fontSize:"3em"}} ><FaTelegram  /></div>
+        <h5 className="card-title" href="#">TELEGRAM GROUP</h5>
+        <p className="card-text" href="#">Join the Telegram group for all the updates on upcoming opportunities and interaction based on that.</p>
       </div>
     </div>
   </div>
   <div className="col-sm-4 my-3">
     <div className="card text-center">
       <div className="card-body">
-        <h5 className="card-title">Special title treatment</h5>
-        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <button href="#" className="btn btn-primary text-white ">Go somewhere</button>
+      <div href="#"  style={{color:"#FF0000" ,fontSize:"3em"}}><FaLinkedin /></div>
+        <h5 className="card-title" href="#">LINKEDIN</h5>
+        <p className="card-text">Follow the official page of Algoders commiunity where we posts about all the upcoming workshops and events.</p>
       </div>
     </div>
   </div>
   <div className="col-sm-4 my-3">
     <div className="card text-center">
       <div className="card-body">
-        <h5 className="card-title">Special title treatment</h5>
-        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <button href="#" className="btn btn-primary text-white ">Go somewhere</button>
+      <div href="#"  style={{color:"#FF0000" ,fontSize:"3em"}}><FaGithub /></div>
+        <h5 className="card-title" href="#">OPEN SOURCE PROJECT</h5>
+        <p className="card-text">This is the Github repository of Open Source Algoders Community Website built using HTML, CSS and JavaScript.</p>
       </div>
     </div>
   </div>
   <div className="col-sm-4 my-3">
     <div className="card text-center">
       <div className="card-body">
-        <h5 className="card-title">Special title treatment</h5>
-        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <button href="#" className="btn btn-primary text-white ">Go somewhere</button>
+      <div href="#"  style={{color:"#FF0000" ,fontSize:"3em"}}><FaTwitter /></div>
+        <h5 className="card-title" href="#">TWITTER</h5>
+        <p className="card-text">Follow the official Page of the Algoders Community for the updated information.</p>
       </div>
     </div>
   </div>
   <div className="col-sm-4 my-3">
     <div className="card text-center">
       <div className="card-body">
-        <h5 className="card-title">Special title treatment</h5>
-        <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <button href="#" className="btn btn-primary text-white ">Go somewhere</button>
+      <div href="#"  style={{color:"#FF0000" ,fontSize:"3em"}}><FaYoutube /></div>
+        <h5 className="card-title" href="#">YOUTUBE</h5>
+        <p className="card-text">Subscribe to the Youtube channel for all the upcoming Webinars, Tech Events and Workshops.</p>
       </div>
     </div>
   </div>
