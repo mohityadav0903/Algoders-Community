@@ -33,7 +33,7 @@ function App() {
       
     <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/" element={<About/>} />
+        <Route path="/about" element={<About/>} />
         <Route path="/blogs" element={<Blogs/>} />
         <Route path="/post/:postid" element={<SinglePostPage />} />
         <Route path="/write" element={user?<Write />:<Register/>} />
