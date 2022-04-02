@@ -1,5 +1,7 @@
 import Home from "./pages/home/Home";
-// import Home from "./components/algoders/Home";
+import About from "./pages/about/About";
+// import Card from "./components/cards/Card";
+
 import TopBar from "./components/topbar/TopBar";
 import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/contact";
@@ -30,6 +32,18 @@ function App() {
       {/* <Home/> */}
       
     <Routes>
+<<<<<<< HEAD
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
+        {/* <Route exact path="/card" element={<Card />} /> */}
+        <Route exact path="/blogs" element={<Blogs/>} />
+        <Route exact path="/post/:postid" element={<SinglePostPage />} />
+        <Route exact path="/write" element={user?<Write />:<Register/>} />
+        <Route exact path="/settings" element={user?<Settings />:<Register/>} />
+        <Route exact path='/login' element={user?<Home/>:<Login />} />
+        <Route exact path='/register' element={user ? <Home/>:<Register />} />
+        <Route exact path='/contact' element={ <Contact/> } />
+=======
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blogs/>} />
         <Route path="/post/:postid" element={<SinglePostPage />} />
@@ -39,6 +53,7 @@ function App() {
         <Route path='/register' element={user ? <Home/>:<Register />} />
         <Route path='/contact' element={ <Contact/> } />
         <Route path='/Mentor' element={ <Mentor/> } />
+>>>>>>> 92f5a5ff61b65280e2612c0b8eec8dcaaa98ba71
       </Routes>
       <ContactSection/>
       <Footer/>
