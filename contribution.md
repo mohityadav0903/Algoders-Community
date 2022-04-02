@@ -28,7 +28,7 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 
 **3.** Navigate to the project directory.
 ```
-   cd client
+   cd Algoders-Community
 ```
 
 **4.** Create a new branch:
@@ -57,7 +57,7 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 
 **10.** Setup a reference(remote) to the original repository to get all the changes from the remote.
 ```
-   git remote add upstream  https://github.com/SauravMukherjee44/CodeIN-Community-Website.git
+   git remote add upstream  https://github.com/mohityadav0903/Algoders-Community
 ```
 
 **11.** Check the remotes for this repository.

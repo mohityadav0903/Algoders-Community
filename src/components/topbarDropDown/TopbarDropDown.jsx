@@ -13,7 +13,7 @@ const TopbarDropDown = () => {
                  <DropDownElements />
             </ul>
             </li> */}
-            <ul class="nav justify-content-center bg-black py-3 text-white">
+            <ul class="nav justify-content-center py-3 text-white">
 
    <DropDownElements />
             </ul>
