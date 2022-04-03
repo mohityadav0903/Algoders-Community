@@ -11,7 +11,8 @@ a:hover{
     display: flex;
     justify-content:center;
     align-items:center;
-    margin: 10px 0 0;
+   
+    transform: translateY(4px);
 }
 .Blog-But{
     display: flex;
@@ -21,6 +22,9 @@ a:hover{
     font-weight:bolder;
     font-size: 20px;
     background-color: white;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.722);
 }
 .Blog-But:active{
     position: relative;
