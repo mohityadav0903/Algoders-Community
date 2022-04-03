@@ -65,6 +65,16 @@
   cursor: pointer;
 }
 
+.text-white.justify-content-center{
+    background-color: #001329;
+    margin: 0;
+   height: 6em;
+   display: flex;
+  
+   align-items: center;
+    
+}
+
 @media (max-width: 990px) {
   .wlcmtxt {
     display: none;
