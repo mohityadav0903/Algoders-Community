@@ -1,60 +1,52 @@
-.card{
-    display:flex;
-    flex-direction:row;
-    border: 1px black solid;
-    justify-content: space-between;
-    width:36em;
-    height:12em;
-    align-items: center;
-    color:white;
-    background-color:rgba(24,23,22);                                                                                                                                                
-    /* position:absolute; */
-    border-radius: 10px;
-    /* margin-left: 10px;
+.card {
+  display: flex;
+  flex-direction: row;
+  border: 1px black solid;
+  justify-content: space-between;
+  width: 36em;
+  height: 12em;
+  align-items: center;
+  color: white;
+  background-color: rgba(24, 23, 22);
+  /* position:absolute; */
+  border-radius: 10px;
+  /* margin-left: 10px;
     margin-top: 20px; */
-    border:3px solid rgb(94,93,92);
-    transition: 1s;
-    
+  border: 3px solid rgb(94, 93, 92);
+  transition: 1s;
 }
-.card:hover{
-    display:flex;
-    flex-direction:row;
-    border: 1px black solid;
-    justify-content: space-between;
-    width:36em;
-    height:12em;
-    align-items: center;
-    color:white;
-    background-color:rgb(68, 66, 62);                                                                                                                                                
-    /* position:absolute; */
-    border-radius: 10px;
-    /* margin-left: 10px;
+.card:hover {
+  display: flex;
+  flex-direction: row;
+  border: 1px black solid;
+  justify-content: space-between;
+  width: 36em;
+  height: 12em;
+  align-items: center;
+  color: white;
+  background-color: rgb(68, 66, 62);
+  /* position:absolute; */
+  border-radius: 10px;
+  /* margin-left: 10px;
     margin-top: 20px; */
-    border:3px solid rgb(94,93,92);
-    transform:translateY(-6px);
-    cursor:pointer;
-    
+  border: 3px solid rgb(94, 93, 92);
+  transform: translateY(-6px);
+  cursor: pointer;
 }
-.text{
-    height:10em;
-    /* background-color:rgb(31, 182, 31); */
-    display:flex;
-    flex-direction:column;
-    justify-content: flex-start;  
-    border-radius: 10px;    
-                                                                               
+.text {
+  height: 10em;
+  /* background-color:rgb(31, 182, 31); */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 10px;
 }
-.heading{
-    padding-top:5px;
-    font-weight: 700;
-    font-size: 25px;
+.heading {
+  padding-top: 5px;
+  font-weight: 700;
+  font-size: 25px;
 }
-.body{
-    font-weight: 100;  
-    font-size: 17px;
-    
-}
-img{
-    width:9em;
-    padding-right: 2em;  
+.body {
+  font-weight: 100;
+  font-size: 17px;
 }
