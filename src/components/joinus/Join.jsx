@@ -1,9 +1,10 @@
+/* eslint-disable react/jsx-no-undef */
 import React, { useEffect } from 'react';
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { Link } from 'react-router-dom';
 import {FaDiscord ,FaTelegram ,FaLinkedin,FaGithub,FaTwitter,FaYoutube} from "react-icons/fa";
-import Mentor from './Mentor';
+// import { Card } from '@mui/material';
 
 function Join() {
   useEffect(()=>{
@@ -37,57 +38,58 @@ function Join() {
           src="https://bootstrapmade.com/demo/templates/Vesperr/assets/img/counts-img.svg" alt="" className="img-fluid mb-4 mb-lg-0" /></div>
           </div>
        <div className="row" data-aos="fade-down">
+         
   <div className="col-sm-4 my-3">
-    <div className="card text-center">
+    <div className="card text-center" style={{width: "350px", height: "200px"}}>
       <div className="card-body">
-        <div href="#" style={{color:"#FF0000" ,fontSize:"3em"}} ><FaDiscord /></div>
-        <h5  className="card-title" href="#">DISCORD SERVER</h5>
-        <p className="card-text">Join the community on Discord for the interaction with students from all over the India.</p>
+        <div href="#" style={{color:"#0168D9" ,fontSize:"2em", margin:"0.75rem 0"}} ><FaDiscord /></div>
+        <h5  className="card-title" href="#" style={{color:"#d3d3d3",fontWeight:"bold",letterSpacing:"3px"}}>DISCORD SERVER</h5>
+        <p className="card-text" style={{fontSize: "0.8rem",lineHeight: "1.5"}}>Join the community on Discord for the interaction with students from all over the India.</p>
+      </div>
+    </div>
+  </div> 
+  <div className="col-sm-4 my-3">
+    <div className="card text-center" style={{width: "350px", height: "200px"}}>
+      <div className="card-body">
+      <div href="#"  style={{color:"#0168D9" ,fontSize:"2em", margin:"0.75rem 0"}} ><FaTelegram  /></div>
+        <h5 className="card-title" href="#" style={{color:"#d3d3d3",fontWeight:"bold",letterSpacing:"3px"}}>TELEGRAM GROUP</h5>
+        <p className="card-text" style={{fontSize: "0.8rem",lineHeight: "1.5"}} ahref="#">Join the Telegram group for all the updates on upcoming opportunities and interaction based on that.</p>
       </div>
     </div>
   </div>
   <div className="col-sm-4 my-3">
-    <div className="card text-center">
+    <div className="card text-center" style={{width: "350px", height: "200px"}}>
       <div className="card-body">
-      <div href="#"  style={{color:"#FF0000" ,fontSize:"3em"}} ><FaTelegram  /></div>
-        <h5 className="card-title" href="#">TELEGRAM GROUP</h5>
-        <p className="card-text" href="#">Join the Telegram group for all the updates on upcoming opportunities and interaction based on that.</p>
+      <div href="#"  style={{color:"#0168D9" ,fontSize:"2em", margin:"0.75rem 0"}}><FaLinkedin /></div>
+        <h5 className="card-title" href="#" style={{color:"#d3d3d3",fontWeight:"bold",letterSpacing:"3px"}}>LINKEDIN</h5>
+        <p className="card-text" style={{fontSize: "0.8rem",lineHeight: "1.5"}}>Follow the official page of Algoders commiunity where we posts about all the upcoming workshops and events.</p>
       </div>
     </div>
   </div>
   <div className="col-sm-4 my-3">
-    <div className="card text-center">
+    <div className="card text-center" style={{width: "350px", height: "200px"}}>
       <div className="card-body">
-      <div href="#"  style={{color:"#FF0000" ,fontSize:"3em"}}><FaLinkedin /></div>
-        <h5 className="card-title" href="#">LINKEDIN</h5>
-        <p className="card-text">Follow the official page of Algoders commiunity where we posts about all the upcoming workshops and events.</p>
+      <div href="#"  style={{color:"#0168D9" ,fontSize:"2em", margin:"0.75rem 0"}}><FaGithub /></div>
+        <h5 className="card-title" href="#" style={{color:"#d3d3d3",fontWeight:"bold",letterSpacing:"3px"}}>OPEN SOURCE PROJECT</h5>
+        <p className="card-text" style={{fontSize: "0.8rem",lineHeight: "1.5"}}>This is the Github repository of Open Source Algoders Community Website built using HTML, CSS and JavaScript.</p>
       </div>
     </div>
   </div>
   <div className="col-sm-4 my-3">
-    <div className="card text-center">
+    <div className="card text-center" style={{width: "350px", height: "200px"}}>
       <div className="card-body">
-      <div href="#"  style={{color:"#FF0000" ,fontSize:"3em"}}><FaGithub /></div>
-        <h5 className="card-title" href="#">OPEN SOURCE PROJECT</h5>
-        <p className="card-text">This is the Github repository of Open Source Algoders Community Website built using HTML, CSS and JavaScript.</p>
+      <div href="#"  style={{color:"#0168D9" ,fontSize:"2em", margin:"0.75rem 0"}}><FaTwitter /></div>
+        <h5 className="card-title" href="#" style={{color:"#d3d3d3",fontWeight:"bold",letterSpacing:"3px"}}>TWITTER</h5>
+        <p className="card-text" style={{fontSize: "0.8rem",lineHeight: "1.5"}}>Follow the official Page of the Algoders Community for the updated information.</p>
       </div>
     </div>
   </div>
-  <div className="col-sm-4 my-3">
-    <div className="card text-center">
+   <div className="col-sm-4 my-3">
+    <div className="card text-center" style={{width: "350px", height: "200px"}}>
       <div className="card-body">
-      <div href="#"  style={{color:"#FF0000" ,fontSize:"3em"}}><FaTwitter /></div>
-        <h5 className="card-title" href="#">TWITTER</h5>
-        <p className="card-text">Follow the official Page of the Algoders Community for the updated information.</p>
-      </div>
-    </div>
-  </div>
-  <div className="col-sm-4 my-3">
-    <div className="card text-center">
-      <div className="card-body">
-      <div href="#"  style={{color:"#FF0000" ,fontSize:"3em"}}><FaYoutube /></div>
-        <h5 className="card-title" href="#">YOUTUBE</h5>
-        <p className="card-text">Subscribe to the Youtube channel for all the upcoming Webinars, Tech Events and Workshops.</p>
+      <div href="#"  style={{color:"#0168D9" ,fontSize:"2em"}}><FaYoutube /></div>
+        <h5 className="card-title" href="#" style={{color:"#d3d3d3",fontWeight:"bold",letterSpacing:"3px"}}>YOUTUBE</h5>
+        <p className="card-text"style={{fontSize: "0.8rem",lineHeight: "1.5"}}>Subscribe to the Youtube channel for all the upcoming Webinars, Tech Events and Workshops.</p>
       </div>
     </div>
   </div>
