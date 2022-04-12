@@ -39,7 +39,7 @@ function About() {
             <img
               src="https://bootstrapious.com/i/snippets/sn-about/illus.png"
               alt=""
-              className="img-fluid "
+              className="img-fluid"
             />
           </div>
         </div>
