@@ -8,7 +8,7 @@ import "aos/dist/aos.css";
 
 function Footer() {
     useEffect(()=> {
-        Aos.init({duration:2000})
+        Aos.init({ duration: 1500 ,startEvent:'DOMContentLoaded' , delay:0, mirror:false, easing:'ease-in'});
     })
 
     return (
@@ -27,7 +27,7 @@ function Footer() {
 
                         <div className="col-lg-3 col-md-6 footer-links">
                             <h4>Useful Links</h4>
-                            <ul>
+                            <ul className='usefulLinks'>
                                 <li className='font-bold'><i className="fa fa-home"></i> <a href="#">Home</a></li>
                                 <li><i className="fa fa-address-card"></i> <a href="#">About us</a></li>
                                 <li><i className="fa fa-laptop-code"></i> <a href="#">Blogs</a></li>
@@ -53,7 +53,7 @@ function Footer() {
                                 <a href="#" className="facebook" target={'_blank'}><i className=" fab fa-facebook"></i></a>
                                 <a href="https://www.linkedin.com/company/algoderscommunity/mycompany/" className="linkedin" target='_blank'><i class="fab fa-linkedin"></i></a>
                                 <a href="https://discord.gg/uVbgcvhc" className="discord"><i class="fab fa-discord" target='_blank'></i></a>
-                                <a href="https://www.instagram.com/askalgoders/" className="instagram" target='_blank'><i className="topIcon fab fa-instagram"></i></a>
+                                <a href="https://www.instagram.com/askalgoders/" className="instagram" target='_blank'><i className=" fab fa-instagram"></i></a>
                              </div>
                         </div>
                         <div className="col-lg-3 col-md-6 footer-links">

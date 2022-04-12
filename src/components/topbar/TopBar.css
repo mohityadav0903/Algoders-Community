@@ -44,6 +44,15 @@
     position:sticky;
     font-size: xx-large;
     font-family: cursive;
+    cursor: none;
+    text-decoration: none;
+  }
+
+  .navbar-brand:hover{
+    cursor: pointer;
+    font-weight: 900;
+    text-shadow: rgb(50, 110, 251) 2px 3px;
+    text-decoration: none;
   }
   
   .topListItem:hover{

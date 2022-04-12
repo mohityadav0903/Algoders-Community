@@ -66,7 +66,7 @@ const TopBar = () => {
            
              {/* <i className="topSearchIcon fas fa-search"></i> */}
 
-    <a className="navbar-brand mx-auto text-white ">
+    <a className="navbar-brand mx-auto text-white "  href='/'>
       Algoders <div className='d-none d-sm-inline'> Community</div></a>
     <button className="navbar-toggler bg-light text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
