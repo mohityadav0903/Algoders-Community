@@ -14,17 +14,6 @@ const TopBar = () => {
   const { user, dispatch } = useContext(Context);
   const { pathname } = useLocation();
 
-<<<<<<< HEAD
-    <a className="navbar-brand mx-auto text-white "  href='/'>
-      Algoders <div className='d-none d-sm-inline'> Community</div></a>
-    <button className="navbar-toggler bg-light text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse text-white" id="navbarSupportedContent">
-    <ul className=' navbar-nav topList  ms-auto text-white'>
-                <li className='topListItem nav-item my-2 fw-bold'>
-                    <Link to='/' className='link'>Home</Link>
-=======
   return (
     // <div className='top nav nav-bar'>
     //         <div className='topLeft'>
@@ -151,7 +140,6 @@ const TopBar = () => {
                   <Link to="/write" className="link nav-item fw-bold">
                     Write
                   </Link>
->>>>>>> aedce18b5091b0f841bd3765aef3410c28bc8546
                 </li>
               )}
             </ul>

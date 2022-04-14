@@ -129,6 +129,10 @@
   color: #fff;
   text-decoration: none;
 }
+.navbar-brand{
+  text-shadow: rgb(29, 70, 153) 2px 5px;
+}
+
 #footer {
   font-size: 14px;
   background: #4895ef;

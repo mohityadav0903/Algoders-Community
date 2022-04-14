@@ -80,23 +80,6 @@
     display: none;
   }
   .navbar-brand {
-<<<<<<< HEAD
-    transform: translateX(-50%);
-    left: 47%;
-    position:sticky;
-    font-size: xx-large;
-    font-family: cursive;
-    cursor: none;
-    text-decoration: none;
-  }
-
-  .navbar-brand:hover{
-    cursor: pointer;
-    font-weight: 900;
-    text-shadow: rgb(50, 110, 251) 2px 3px;
-    text-decoration: none;
-=======
     left: 50%;
->>>>>>> aedce18b5091b0f841bd3765aef3410c28bc8546
   }
 }

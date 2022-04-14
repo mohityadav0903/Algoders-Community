@@ -8,11 +8,7 @@ import "aos/dist/aos.css";
 
 function Footer() {
     useEffect(()=> {
-<<<<<<< HEAD
-        Aos.init({ duration: 1500 ,startEvent:'DOMContentLoaded' , delay:0, mirror:false, easing:'ease-in'});
-=======
         Aos.init({duration:1000})
->>>>>>> aedce18b5091b0f841bd3765aef3410c28bc8546
     })
 
     return (
@@ -53,11 +49,7 @@ function Footer() {
                                 <a href="#" className="facebook" target={'_blank'}><i className="fab fa-facebook"></i></a>
                                 <a href="https://www.linkedin.com/company/algoderscommunity/mycompany/" className="linkedin" target='_blank'><i class="fab fa-linkedin"></i></a>
                                 <a href="https://discord.gg/uVbgcvhc" className="discord"><i class="fab fa-discord" target='_blank'></i></a>
-<<<<<<< HEAD
-                                <a href="https://www.instagram.com/askalgoders/" className="instagram" target='_blank'><i className=" fab fa-instagram"></i></a>
-=======
                                 <a href="https://www.instagram.com/askalgoders/" className="instagram" target='_blank'><i className="fab fa-instagram"></i></a>
->>>>>>> aedce18b5091b0f841bd3765aef3410c28bc8546
                              </div>
                         </div>
                         <div className="col-lg-3 col-md-6 footer-links" data-aos="zoom-in">
