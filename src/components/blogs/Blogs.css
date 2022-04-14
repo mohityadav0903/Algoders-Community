@@ -1,9 +1,11 @@
 .blogs {
-  background-color: black;
+  background-color: #001329;
+  height: 50vh;
 }
 
 .puffLoader {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-top: 1rem;
 }

@@ -1,57 +1,95 @@
-.register {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.register-container {
+
+  background-color: #001329;
+
   background-color: black;
+
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+
+}
+.register {
+  text-align: center;
+  width: 450px;
 }
 
-.registerTitle {
-  font-size: 50px;
+.register {
+  text-align: center;
+  width: 450px;
+}
+
+.register-title {
   color: white;
+  font-size: 30px;
 }
-
-.registerForm {
-  margin-top: 20px;
+.register-form {
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
-
-.registerForm > label {
-  margin: 10px 0;
-  color: white;
-}
-
-.registerInput {
-  padding: 10px;
-  background-color: white;
-  border: none;
+.input {
+  width: 100%;
+  line-height: 2.5;
+  padding: 5px 10px;
+  font-size: 18px;
   border-radius: 10px;
-}
-
-.registerInput:focus {
+  border: 1.5px solid gray;
   outline: none;
+  background: transparent;
+  color: #ffffff;
+}
+.input:focus {
+  background-color: transparent;
+  border: 1.5px solid #0b5ed7;
+}
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+
+}
+.input-password {
+  position: relative;
 }
 
-.registerButton {
-  margin-top: 20px;
-  cursor: pointer;
-  background-color: teal;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  text-align: center;
+.input-password {
+  position: relative;
 }
 
-.registerLoginButton {
+.input-container i {
   position: absolute;
-  top: 80px;
-  right: 20px;
-  background-color: lightcoral;
-  cursor: pointer;
+  margin-right: 4px;
+  width: 37px;
+  padding: 3px;
+}
+.form-text {
+  text-align: left;
+}
+.register-footer p {
+  font-size: 18px;
+  margin-bottom: 0;
+  line-height: 1.5;
+  color: rgb(189, 189, 189);
+}
+.register-error {
+  margin-top: 10px;
+}
+.register-footer p a {
+  font-weight: 600;
+}
+.register-button {
   padding: 10px;
+  width: 150px;
   border: none;
+  background-color: #0b5ed7;
   color: white;
+  font-size: 18px;
+  font-weight: 600;
   border-radius: 10px;
+  margin-top: 15px;
 }
