@@ -23,7 +23,7 @@ function Footer() {
 
                         <div className="col-lg-3 col-md-6 footer-links" data-aos="fade-up">
                             <h4>Useful Links</h4>
-                            <ul>
+                            <ul className='usefulLinks'>
                                 <li className='font-bold'><i className="fa fa-home"></i> <a href="#">Home</a></li>
                                 <li><i className="fa fa-address-card"></i> <a href="#">About us</a></li>
                                 <li><i className="fa fa-laptop-code"></i> <a href="#">Blogs</a></li>
