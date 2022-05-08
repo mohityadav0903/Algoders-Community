@@ -10,7 +10,7 @@ function Team() {
     <div id="team">
       <div className="container">
         <div className="row ">
-          <div className=" text-center">
+          <div id="team" className=" text-center">
             <h2 className="display-4 fw-bold">Our team</h2>
           </div>
         </div>

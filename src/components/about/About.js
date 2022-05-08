@@ -13,7 +13,9 @@ function About() {
       <div className="container ">
         <div className="row h-100 align-items-center ">
           <div className="col-lg-6  text-center " data-aos="fade-up">
-            <h1 className="display-4 fw-bold">About us</h1>
+            <h1 id="about" className="display-4 fw-bold">
+              About us
+            </h1>
             <p className="lead  mb-0">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
               ipsum, vero quas veniam, amet itaque minima est architecto quaerat
@@ -28,7 +30,7 @@ function About() {
             </p>
             <p className="lead ">
               To know more{" "}
-              <a href="#" className="text-black">
+              <a href="/about" className="text-black">
                 <button className="btn btn-primary rounded-pill text-black">
                   Click here
                 </button>

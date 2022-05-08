@@ -52,9 +52,10 @@ const TopBar = () => {
     //         </div>
     //   </div>;
     <>
-
-      <nav className="navbar navbar-expand-lg navbar-light sticky-top text-white py-1 top flex d-flex" style={{background:"#001329"}}>
-
+      <nav
+        className="navbar navbar-expand-lg navbar-light sticky-top text-white py-1 top flex d-flex"
+        style={{ background: "#001329" }}
+      >
         <div className="container-fluid  ">
           {user ? (
             <div className=" user">
@@ -119,19 +120,19 @@ const TopBar = () => {
                 </Link>
               </li>
               <li className="topListItem nav-item my-2 fw-bolder">
-                <Link to="/" className="link">
+                <a href="/#about" className="link">
                   About
-                </Link>
+                </a>
               </li>
               <li className="topListItem nav-item my-2 fw-bold">
-                <Link to="/" className="link">
+                <a href="/#contact" className="link">
                   Contact
-                </Link>
+                </a>
               </li>
               <li className="topListItem nav-item my-2 fw-bold">
-                <Link to="/blogs" className="link">
+                <a href="/blogs" className="link">
                   Blogs
-                </Link>
+                </a>
               </li>
 
               {console.log(user)}
