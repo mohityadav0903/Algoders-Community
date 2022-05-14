@@ -1,11 +1,14 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Scroll from "react-scroll";
 import { Context } from "../../context/Context";
 import { useLocation } from "react-router-dom";
 import TopbarDropDown from "../topbarDropDown/TopbarDropDown";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./TopBar.css";
+
+const ScrollLink = Scroll.Link;
 
 const TopBar = () => {
   useEffect(() => {
@@ -120,19 +123,31 @@ const TopBar = () => {
                 </Link>
               </li>
               <li className="topListItem nav-item my-2 fw-bolder">
-                <a href="/#about" className="link">
+                <ScrollLink
+                  className="link"
+                  smooth={true}
+                  duration={500}
+                  offset={-200}
+                  to="about"
+                >
                   About
-                </a>
+                </ScrollLink>
               </li>
               <li className="topListItem nav-item my-2 fw-bold">
-                <a href="/#contact" className="link">
+                <ScrollLink
+                  className="link"
+                  smooth={true}
+                  duration={500}
+                  offset={-100}
+                  to="contact"
+                >
                   Contact
-                </a>
+                </ScrollLink>
               </li>
               <li className="topListItem nav-item my-2 fw-bold">
-                <a href="/blogs" className="link">
+                <Link to="/blogs" className="link">
                   Blogs
-                </a>
+                </Link>
               </li>
 
               {console.log(user)}

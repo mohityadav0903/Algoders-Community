@@ -8,7 +8,9 @@ function Contact() {
           <div className="container px-5 text-center">
             <div className="row gx-5 justify-content-center">
               <div className="col-lg-8">
-                <h1 className="page-header-ui-title mb-3">Contact us</h1>
+                <h1 id="contact" className="page-header-ui-title mb-3">
+                  Contact us
+                </h1>
                 <p className="page-header-ui-text">
                   Have questions? We're here to help!
                 </p>
