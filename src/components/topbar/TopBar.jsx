@@ -1,11 +1,14 @@
 import React, { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Scroll from "react-scroll";
 import { Context } from "../../context/Context";
 import { useLocation } from "react-router-dom";
 import TopbarDropDown from "../topbarDropDown/TopbarDropDown";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./TopBar.css";
+
+const ScrollLink = Scroll.Link;
 
 const TopBar = () => {
   useEffect(() => {
@@ -52,9 +55,10 @@ const TopBar = () => {
     //         </div>
     //   </div>;
     <>
-
-      <nav className="navbar navbar-expand-lg navbar-light sticky-top text-white py-1 top flex d-flex" style={{background:"#001329"}}>
-
+      <nav
+        className="navbar navbar-expand-lg navbar-light sticky-top text-white py-1 top flex d-flex"
+        style={{ background: "#001329" }}
+      >
         <div className="container-fluid  ">
           {user ? (
             <div className=" user">
@@ -119,14 +123,26 @@ const TopBar = () => {
                 </Link>
               </li>
               <li className="topListItem nav-item my-2 fw-bolder">
-                <Link to="/" className="link">
+                <ScrollLink
+                  className="link"
+                  smooth={true}
+                  duration={500}
+                  offset={-200}
+                  to="about"
+                >
                   About
-                </Link>
+                </ScrollLink>
               </li>
               <li className="topListItem nav-item my-2 fw-bold">
-                <Link to="/" className="link">
+                <ScrollLink
+                  className="link"
+                  smooth={true}
+                  duration={500}
+                  offset={-100}
+                  to="contact"
+                >
                   Contact
-                </Link>
+                </ScrollLink>
               </li>
               <li className="topListItem nav-item my-2 fw-bold">
                 <Link to="/blogs" className="link">
