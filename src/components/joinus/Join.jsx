@@ -69,7 +69,7 @@ function Join() {
           </div>
         </div>
         <div className="row" data-aos="fade-down">
-          <div className="col-sm-4 my-3">
+          <div className="col-sm-4 my-3 d-flex justify-content-center">
             <div
               className="card text-center"
               style={{ width: "350px", height: "200px" }}
@@ -106,7 +106,7 @@ function Join() {
               </div>
             </div>
           </div>
-          <div className="col-sm-4 my-3">
+          <div className="col-sm-4 my-3 d-flex justify-content-center">
             <div
               className="card text-center"
               style={{ width: "350px", height: "200px" }}
@@ -144,7 +144,7 @@ function Join() {
               </div>
             </div>
           </div>
-          <div className="col-sm-4 my-3">
+          <div className="col-sm-4 my-3 d-flex justify-content-center">
             <div
               className="card text-center"
               style={{ width: "350px", height: "200px" }}
@@ -181,7 +181,7 @@ function Join() {
               </div>
             </div>
           </div>
-          <div className="col-sm-4 my-3">
+          <div className="col-sm-4 my-3 d-flex justify-content-center">
             <div
               className="card text-center"
               style={{ width: "350px", height: "200px" }}
@@ -218,7 +218,7 @@ function Join() {
               </div>
             </div>
           </div>
-          <div className="col-sm-4 my-3">
+          <div className="col-sm-4 my-3 d-flex justify-content-center">
             <div
               className="card text-center"
               style={{ width: "350px", height: "200px" }}
@@ -255,7 +255,7 @@ function Join() {
               </div>
             </div>
           </div>
-          <div className="col-sm-4 my-3">
+          <div className="col-sm-4 my-3 d-flex justify-content-center">
             <div
               className="card text-center"
               style={{ width: "350px", height: "200px" }}
