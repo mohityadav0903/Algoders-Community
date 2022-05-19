@@ -56,7 +56,7 @@ function About() {
           ></path>
         </svg>
         <div className="container">
-          <div className="row align-items-center mb-5 ">
+          <div className="row align-items-center mb-5 overflow-hidden">
             <div className="col-lg-6  text-center">
               <i className="fa fa-leaf fa-2x mb-3 text-primary"></i>
               <h2 className="font-weight-light text-white fw-bolder">
