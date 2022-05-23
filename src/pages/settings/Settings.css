@@ -27,12 +27,25 @@
   }
   
   .settingsForm {
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black;
 
+    width: 80%;
+    max-width: 520px;
+    height: 18rem;
+    color: white;
+    background-color: rgba(24, 23, 22);
+    border-radius: 10px;
+    border: 3px solid rgb(94, 93, 92);
+  }
+  .field{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    max-width: 380px;
   }
   
   .settingsPP {
@@ -88,13 +101,9 @@
   
   .settingsSubmitButton {
     align-self: center;
-    width: 150px;
-    border: none;
     border-radius: 10px;
     color: white;
     background-color: blue;
-    padding: 10px;
-    margin-top: 20px;
     cursor: pointer;
     display: flex;
     align-items: center;

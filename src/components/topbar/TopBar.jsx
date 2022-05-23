@@ -150,7 +150,6 @@ const TopBar = () => {
                 </Link>
               </li>
 
-              {console.log(user)}
               {user && user.others.role === "admin" && (
                 <li className="topListItem">
                   <Link to="/write" className="link nav-item fw-bold">

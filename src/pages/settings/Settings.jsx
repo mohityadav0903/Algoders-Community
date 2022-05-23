@@ -61,12 +61,16 @@ const Setting = () => {
       <div className="settingsTitle justify-content-center ">
         <span className="settingsTitleUpdate">Update Your Account</span>
       </div>
-      <form className="settingsForm card justify-content-center py-5" onSubmit={handleSubmit}>
-    <label >Email</label>
-        <input type="text" className='form-control w-50 text-red' placeholder={user.email} required onChange={(e) => setEmail(e.target.value)} />
-        <label >Password</label>
-        <input type="password" className='form-control w-50' required onChange={(e) => setPassword(e.target.value)} />
-        <button className="settingsSubmitButton" type="submit">Update</button>
+      <form className="settingsForm justify-content-center py-5" onSubmit={handleSubmit}>
+        <div className='field'>
+          <label >Email</label>
+          <input type="text" className='form-control text-red' placeholder={user.email} required onChange={(e) => setEmail(e.target.value)} />
+        </div>
+        <div className='field'>
+          <label >Password</label>
+          <input type="password" className='form-control' required onChange={(e) => setPassword(e.target.value)} />
+        </div>
+        <button className="btn settingsSubmitButton" type="submit">Update</button>
         {success && (
           <span
             style={{ color: "green", textAlign: "center", marginTop: "20px" }}
