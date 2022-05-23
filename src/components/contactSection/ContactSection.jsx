@@ -14,7 +14,6 @@ function Contacts(){
          
         const { name, value} = e.target;
         setFormValues({ ...formValues, [name]: value });
-        console.log(formValues);
        
     };
 
@@ -25,9 +24,7 @@ function Contacts(){
         setIsSubmit(true);
     };
     useEffect(()=> {
-        console.log(formErrors);
         if(Object.keys(formErrors).length === 0 && isSubmit){
-            console.log(formValues);
         }
     }, [formErrors]);
 

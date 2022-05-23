@@ -76,10 +76,10 @@ function Footer() {
                   className="linkedin"
                   target="_blank"
                 >
-                  <i class="fab fa-linkedin"></i>
+                  <i className="fab fa-linkedin"></i>
                 </a>
                 <a href="https://discord.gg/uVbgcvhc" className="discord">
-                  <i class="fab fa-discord" target="_blank"></i>
+                  <i className="fab fa-discord" target="_blank"></i>
                 </a>
                 <a
                   href="https://www.instagram.com/askalgoders/"
