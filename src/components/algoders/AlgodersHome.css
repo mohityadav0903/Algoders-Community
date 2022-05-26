@@ -98,17 +98,20 @@
   align-items: center;
 }
 #footer .footer-top .footer-links ul li:first-child {
-  padding-top: 0;
+  padding-top: 12px;
 }
 #footer .footer-top .footer-links ul a {
   color: #000000;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
 }
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
   color: #47b2e4;
+  border-bottom: 2px solid #47b2e4;
 }
 #footer .footer-top .social-links a {
   font-size: 18px;
