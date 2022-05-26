@@ -666,6 +666,12 @@ progress {
   height: auto;
 }
 
+.img-thumbnail:hover{
+  border: 2px solid red;
+  padding: 10px;
+  cursor: pointer;
+}
+
 .figure {
   display: inline-block;
 }
