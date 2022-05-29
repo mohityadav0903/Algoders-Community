@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { Carousel} from 'react-responsive-carousel'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function Team() {
   useEffect(() => {
@@ -16,6 +18,16 @@ function Team() {
         </div>
 
         <div className="row text-center" data-aos="zoom-in-up">
+        <Carousel 
+          showArrows={false} 
+          autoPlay={true} 
+          infiniteLoop={true} 
+          interval={3000}
+          statusFormatter={()=>('')}
+          useKeyboardArrows={true}
+          stopOnHover={false}
+        >
+        <div className="d-flex justify-content-around">
           <div className="col-xl-3 col-sm-6 ">
             <div className="rounded shadow-sm py-5 px-4">
               <img
@@ -28,25 +40,25 @@ function Team() {
               <span className="small text-uppercase text-muted">
                 CEO - Founder
               </span>
-              <ul className="social">
+              <ul className="social  mb-0 list-inline mt-3">
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-facebook-f"></i>
+                    <i className="fa-brands fa-facebook-f"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-twitter"></i>
+                    <i className="fa-brands fa-twitter"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-instagram"></i>
+                    <i className="fa-brands fa-instagram"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-linkedin"></i>
+                    <i className="fa-brands fa-linkedin"></i>
                   </a>
                 </li>
               </ul>
@@ -67,27 +79,29 @@ function Team() {
               <ul className="social mb-0 list-inline mt-3">
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-facebook-f"></i>
+                    <i className="fa-brands fa-facebook-f"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-twitter"></i>
+                    <i className="fa-brands fa-twitter"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-instagram"></i>
+                    <i className="fa-brands fa-instagram"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-linkedin"></i>
+                    <i className="fa-brands fa-linkedin"></i>
                   </a>
                 </li>
               </ul>
             </div>
           </div>
+        </div>
+        <div className="d-flex justify-content-around">
           <div className="col-xl-3 col-sm-6 ">
             <div className=" rounded shadow-sm py-5 px-4">
               <img
@@ -103,22 +117,22 @@ function Team() {
               <ul className="social mb-0 list-inline mt-3">
                 <li className="list-inline-item ">
                   <a href="#" className="social-link">
-                    <i className="fa fa-facebook-f"></i>
+                    <i className="fa-brands fa-facebook-f"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-twitter"></i>
+                    <i className="fa-brands fa-twitter"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-instagram"></i>
+                    <i className="fa-brands fa-instagram"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-linkedin"></i>
+                    <i className="fa-brands fa-linkedin"></i>
                   </a>
                 </li>
               </ul>
@@ -140,27 +154,30 @@ function Team() {
               <ul className="social mb-0 list-inline mt-3">
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-facebook-f"></i>
+                    <i className="fa-brands fa-facebook-f"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-twitter"></i>
+                    <i className="fa-brands fa-twitter"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-instagram"></i>
+                    <i className="fa-brands fa-instagram"></i>
                   </a>
                 </li>
                 <li className="list-inline-item">
                   <a href="#" className="social-link">
-                    <i className="fa fa-linkedin"></i>
+                    <i className="fa-brands fa-linkedin"></i>
                   </a>
                 </li>
               </ul>
             </div>
-          </div>
+          </div>  
+        </div>
+          
+        </Carousel>
         </div>
       </div>
     </div>
