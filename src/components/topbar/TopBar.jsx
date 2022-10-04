@@ -147,9 +147,9 @@ const TopBar = () => {
               <li className="topListItem nav-item my-2 fw-bold">
                 <Link to="/blogs" className="link">
                   Blogs
+                  {window.scrollTo(0, 0)}
                 </Link>
               </li>
-
               {user && user.others.role === "admin" && (
                 <li className="topListItem">
                   <Link to="/write" className="link nav-item fw-bold">
