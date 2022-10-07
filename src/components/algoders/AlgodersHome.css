@@ -1,10 +1,10 @@
 #hero {
   width: 100%;
-  background: #001329;
+  background: black;
 }
 #hero .container {
   padding-top: 32px;
-  color: black;
+  background: black;
 }
 
 #hero .btn-get-started:hover {
@@ -132,9 +132,7 @@
   color: #fff;
   text-decoration: none;
 }
-.navbar-brand{
-  text-shadow: rgb(29, 70, 153) 2px 5px;
-}
+
 
 #footer {
   font-size: 14px;
