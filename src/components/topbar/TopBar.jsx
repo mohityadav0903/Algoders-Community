@@ -7,6 +7,7 @@ import TopbarDropDown from "../topbarDropDown/TopbarDropDown";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./TopBar.css";
+import logo from "../../assets/logo.jpeg";
 
 const ScrollLink = Scroll.Link;
 
@@ -57,7 +58,7 @@ const TopBar = () => {
     <>
       <nav
         className="navbar navbar-expand-lg navbar-light sticky-top text-white py-1 top flex d-flex"
-        style={{ background: "#001329" }}
+        style={{ background: "black" }}
       >
         <div className="container-fluid  ">
           {user ? (
@@ -79,7 +80,7 @@ const TopBar = () => {
             </div>
           ) : (
             <>
-              <ul className=" navbar-nav  topList ">
+              {/* <ul className=" navbar-nav  topList ">
                 <Link to="/login" className="link">
                   {" "}
                   <button className="topListItem nav-item btn btn-primary text-black fw-bolder my-2 ">
@@ -92,15 +93,20 @@ const TopBar = () => {
                     Register
                   </button>
                 </Link>
-              </ul>
+              </ul> */}
+              <a className="navbar-brand mx-auto text-white ">
+                <img src={logo} className="imageSet"></img>
+                <div className="d-none d-sm-inline p-2">Algoders</div>
+              </a>
             </>
-          )}
+          )
+          }
 
           {/* <i className="topSearchIcon fas fa-search"></i> */}
 
-          <a className="navbar-brand mx-auto text-white ">
+          {/* <a className="navbar-brand mx-auto text-white ">
             Algoders <div className="d-none d-sm-inline"> Community</div>
-          </a>
+          </a> */}
           <button
             className="navbar-toggler bg-light text-white"
             type="button"
@@ -147,6 +153,20 @@ const TopBar = () => {
               <li className="topListItem nav-item my-2 fw-bold">
                 <Link to="/blogs" className="link">
                   Blogs
+                </Link>
+              </li>
+              <li className=" navbar-nav  topList">
+                <Link to="/login" className="link">
+                  {" "}
+                  <button className="topListItem nav-item btn btn-primary text-black fw-bolder my-2 border-blue">
+                    Login
+                  </button>
+                </Link>
+                <Link to="/register" className="link">
+                  {" "}
+                  <button className="d-none d-lg-block topListItem nav-item btn btn-success text-black fw-bolder my-2 border-green">
+                    Register
+                  </button>
                 </Link>
               </li>
 

@@ -98,11 +98,10 @@ ul  {
 .address
    li {
       margin-bottom: 50px;
-      
+      list-style-type: none;
    }
 .address
    li a{
-      
       color:#111111;
       font-size: 19px;
    }
