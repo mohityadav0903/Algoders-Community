@@ -1,9 +1,10 @@
 import React from 'react';
 import Posts from '../posts/Posts';
 import './Blogs.css'
+import { useEffect } from 'react';
 
 
-const Blogs = () => {
+const Blogs = ({bool,somefunc}) => {
   return (
     <div className="blogs ">
       <Posts />
