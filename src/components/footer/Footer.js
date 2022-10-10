@@ -11,7 +11,7 @@ function Footer() {
   });
 
   return (
-    <div id="footer" className="footer-top" style={{ background: "#FFF" }}>
+    <div id="footer" className="footer-top" style={{ background: "#FFF",marginTop:"100px" }}>
       <div className="footer-top">
         <div className="container">
           <div className="row">
