@@ -7,6 +7,7 @@ import TopbarDropDown from "../topbarDropDown/TopbarDropDown";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import "./TopBar.css";
+import closeIcon from "../../assets/close.png"
 import logo from "../../assets/logo.jpeg";
 
 const ScrollLink = Scroll.Link;
@@ -108,7 +109,7 @@ const TopBar = () => {
             Algoders <div className="d-none d-sm-inline"> Community</div>
           </a> */}
           <button
-            className="navbar-toggler bg-light text-white"
+            className="navbar-toggler bg-light text-white navbar-toggle collapsed"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -117,6 +118,7 @@ const TopBar = () => {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
+            <span className="close"><img src={closeIcon} alt="close icon"/></span>
           </button>
           <div
             className="collapse navbar-collapse text-white"

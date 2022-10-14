@@ -95,6 +95,13 @@
   align-items: center;
 
 }
+/* toggle icon css */
+.navbar-toggler>.close {
+    display:inline;
+}
+.navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+    display:none;
+}
 
 @media (max-width: 990px) {
   .wlcmtxt {
