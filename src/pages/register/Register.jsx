@@ -3,10 +3,6 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { userSchema } from "../../validations/UserValidation";
-import { useFormik } from "formik";
-import * as Yup from "yup";
-import { useSnackbar } from "notistack";
-import Spinner from "react-bootstrap/Spinner";
 
 const initialInputData = {
   username: "",
@@ -16,154 +12,121 @@ const initialInputData = {
 
 export default function Register() {
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const { enqueueSnackbar } = useSnackbar();
-
-  const validationSchema = Yup.object().shape({
-    username: Yup.string()
-      .required("Username is required"),
-    password: Yup.string()
-      .min(8, "Password must be 8 characters or more")
-      .max(10, "Password must be 10 characters or less")
-      .required("Password is required!"),
-    email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is required"),
-  });
-
-  const handleSuccess = (message) => {
-    enqueueSnackbar(message, {
-      variant: "success",
-      anchorOrigin: {
-        vertical: "top",
-        horizontal: "right",
-      },
-    });
-  };
-const handleFail = (message) => {
-    enqueueSnackbar(message, {
-      variant: "error",
-      anchorOrigin: {
-        vertical: "top",
-        horizontal: "right",
-      },
+  const [error, setError] = useState(null);
+  const [valid, setValid] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [inputData, setInputData] = useState(initialInputData);
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setInputData({
+      ...inputData,
+      [name]: value,
     });
   };
 
-  const handleSignUp = async (values) => {
-    try {
-      const response = await axios.post(
-        "https://algo-backend.herokuapp.com/api/auth/register",
-        values
-      );
-      console.log(response);
-      response.data && window.location.replace("/login");
-      resetForm({ username: username, email: email, password: password })
-    } catch (error) {
-      const { status } = error.response;
-      resetForm({ username: username, email: email, password: password })
-      if (status === 409) {
-        handleFail("User already exists")
-      } else {
-        handleFail("Something went wrong")
+  const { username, email, password } = inputData;
+  const createUser = async () => {
+    const user = {
+      username,
+      password,
+      email,
+    };
+    const isValid = await userSchema.isValid(user);
+    setValid(isValid);
+    return isValid;
+  };
+
+  const handelSubmit = async (e) => {
+    e.preventDefault();
+    const body = { username, email, password };
+    const isValid = createUser();
+    setLoading(true);
+    if (isValid) {
+      setLoading(true);
+      try {
+        const response = await axios.post(
+          "https://algo-backend.herokuapp.com/api/auth/register",
+          body
+        );
+        console.log(response);
+        response.data && window.location.replace("/login");
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+        const { status } = error.response;
+        if (status === 422) {
+          setError("Please fill all the required inforamtion");
+        } else if (password.length <= 7) {
+          setError("Password must be greater than 8 char");
+        } else if (status === 409) {
+          setError("User already exists");
+        } else {
+          setError("Something went wrong");
+        }
       }
     }
   };
 
-  const {isSubmitting, handleBlur, handleChange, values: {username, email, password}, resetForm, errors: { username: usernameError, password: passwordError, email: emailError}, handleSubmit} = useFormik({
-    initialValues: {
-      username: "",
-      password: "",
-      email: ''
-    },
-    enableReinitialize: true,
-    onSubmit: handleSignUp,
-    validationSchema,
-  });
-
-  const error = {
-    color: "red",
-    width: "100%",
-    position: "relative",
-    fontSize: "14px",
-    top: "5px",
-    left: "10px",
-    textAlign: "left",
-  };
-
   return (
     <div className="register-container">
-      <div className="register">
+      <div className="register" onSubmit={handelSubmit}>
         <h1 className="register-title">Register</h1>
-        <form className="register-form" onSubmit={handleSubmit}>
-        <div className="input-wrap">
+        <form className="register-form">
           <input
             className="input"
             name="username"
             type="text"
             placeholder="Username*"
-            value={username}
-            onBlur={handleBlur}
-            onChange={handleChange}
+            onChange={handleInputChange}
           />
-            {usernameError && usernameError ? (
-              <span style={error}>{usernameError}</span>
-            ) : null}
-          </div>
-          <div className="input-wrap">
+          <input
+            className="input"
+            name="email"
+            type="email"
+            placeholder="Email*"
+            onChange={handleInputChange}
+          />
+          <div className="input-container">
             <input
-              className="input"
-              name="email"
-              type="email"
-              placeholder="Email*"
-              value={email}
-              onBlur={handleBlur}
-              onChange={handleChange}
+              className="input input-password"
+              name="password"
+              type={passwordVisible ? "text" : "password"}
+              placeholder="Password*"
+              onChange={handleInputChange}
             />
-              {emailError && emailError ? (
-                <span style={error}>{emailError}</span>
-              ) : null}
-          </div>
-          <div className="input-wrap">
-            <div className="input-container">
-              <input
-                className="input input-password"
-                name="password"
-                type={passwordVisible ? "text" : "password"}
-                placeholder="Password*"
-                value={password}
-                onBlur={handleBlur}
-                onChange={handleChange}
-              />
-              {passwordVisible ? (
-                <i
-                  className="fa-regular fa-eye"
-                  onClick={() => {
-                    setPasswordVisible(!passwordVisible);
-                  }}
-                ></i>
-              ) : (
-                <i
-                  className="fa-regular fa-eye-slash"
-                  onClick={() => {
-                    setPasswordVisible(!passwordVisible);
-                  }}
-                ></i>
-              )}
-            </div>
-            {passwordError && passwordError ? (
-              <span style={error}>{passwordError}</span>
-              ) : null}
+            {passwordVisible ? (
+              <i
+                class="fa-regular fa-eye"
+                onClick={() => {
+                  setPasswordVisible(!passwordVisible);
+                }}
+              ></i>
+            ) : (
+              <i
+                class="fa-regular fa-eye-slash"
+                onClick={() => {
+                  setPasswordVisible(!passwordVisible);
+                }}
+              ></i>
+            )}
           </div>
           <div className="register-footer">
             <div className="form-text">
               <p>
                 Already have an account? <Link to="/login">Login</Link>
               </p>
+              {error && <p className="register-error">{error}</p>}
             </div>
 
-            <button className="login-button" type="submit" disabled={isSubmitting}>
-              {isSubmitting ? (<Spinner animation="border" variant="light"/>) : ('Login') }
-            </button>
+            {loading ? (
+              <button className="register-button" type="submit">
+                Loading...
+              </button>
+            ) : (
+              <button className="register-button" type="submit">
+                Register
+              </button>
+            )}
           </div>
         </form>
       </div>
