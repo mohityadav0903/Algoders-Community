@@ -15,30 +15,30 @@ import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Mentor from "./components/joinus/Mentor";
 import { Routes, Route } from "react-router-dom";
-import { useContext, useState } from "react";
-import { Context } from "./context/Context"; 
-import { WindowSharp } from "@mui/icons-material";
-
-
+import { useContext, useEffect } from "react";
+import { Context } from "./context/Context"; //header<about us<images<footer
 
 function App() {
   const { user } = useContext(Context);
+
   return (
     <div>
       <TopBar />
+      {/* <Home/> */}
+
       <Routes>
-        <Route exact path="/" element={<Home />}/>
-        <Route path="/about" element={<About />}/>
-        <Route path="/blogs" element={<Blogs />}/>
-        <Route path="/post/:postid" element={<SinglePostPage />}/>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/post/:postid" element={<SinglePostPage />} />
         <Route path="/write" element={user ? <Write /> : <Register />} />
         <Route path="/settings" element={user ? <Settings /> : <Register />} />
         <Route path="/login" element={user ? <Home /> : <Login />} />
         <Route path="/register" element={user ? <Home /> : <Register />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/Mentor" element={<Mentor />}/>
+        <Route path="/Mentor" element={<Mentor />} />
       </Routes>
-      <ContactSection/>
+      <ContactSection />
       <Footer />
     </div>
   );

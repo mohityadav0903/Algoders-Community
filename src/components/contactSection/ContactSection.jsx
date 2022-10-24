@@ -1,9 +1,6 @@
 import React from 'react';
 import  './ContactSection.css';
-import {
-    BrowserRouter as Router,
-    useLocation
-  } from "react-router-dom"; 
+ 
 import { useState, useEffect} from 'react';
 
 function Contacts(){
@@ -12,7 +9,6 @@ function Contacts(){
     const [formValues, setFormValues] = useState(initialValues);
     const [formErrors, setFormErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
-    const location = useLocation();
 
     const handleChange = (e) => {
          
@@ -56,11 +52,6 @@ function Contacts(){
         return errors;
 
     };
-    if (location.pathname === '/blogs'){
-        return(
-            <></>
-        )
-    }else{
     return (
     <>
 
@@ -153,7 +144,8 @@ function Contacts(){
 
             </div>
         </section></>
-     )};
-    }
+     );
+}
+
 export default Contacts;
 
