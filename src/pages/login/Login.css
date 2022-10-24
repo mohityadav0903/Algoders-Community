@@ -45,6 +45,12 @@
   justify-content: end;
   width: 100%;
 }
+.input-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 .input-password {
   position: relative;
 }
