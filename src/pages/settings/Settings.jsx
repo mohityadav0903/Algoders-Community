@@ -23,7 +23,7 @@ const Setting = () => {
     dispatch({ type: "LOGOUT" });
   };
   const handleDeleteAccount = async () => {
-  await  axios.delete(`https://algo-backend.herokuapp.com/api/users/${user._id}`,{data:{"userId":user._id}}).then((res) => {<div>Your account has deleted</div>});
+  await  axios.delete(`https://algoders-backend.vercel.app/api/users/${user._id}`,{data:{"userId":user._id}}).then((res) => {<div>Your account has deleted</div>});
     handleLogout();
   };
 
@@ -47,7 +47,7 @@ const Setting = () => {
    const isValid = createUser();
    if (isValid) {
      try {
-       const res = await axios.put("https://algo-backend.herokuapp.com/api/users/" + user._id, updatedUser);
+       const res = await axios.put("https://algoders-backend.vercel.app/api/users/" + user._id, updatedUser);
        setSuccess(true);
        dispatch({ type: "UPDATE_SUCCESS", payload: res.data });
      } catch (err) {

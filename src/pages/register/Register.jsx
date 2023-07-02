@@ -52,7 +52,7 @@ const handleFail = (message) => {
   const handleSignUp = async (values) => {
     try {
       const response = await axios.post(
-        "https://algo-backend.herokuapp.com/api/auth/register",
+        "https://algoders-backend.vercel.app/api/auth/register",
         values
       );
       console.log(response);

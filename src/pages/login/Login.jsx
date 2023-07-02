@@ -47,7 +47,7 @@ const handleFail = (message) => {
     dispatch({ type: "LOGIN_START" });
     try {
       const res = await axios.post(
-        "https://algo-backend.herokuapp.com/api/auth/login",
+        "https://algoders-backend.vercel.app/api/auth/login",
         {
           username: values.username,
           password: values.password

@@ -81,7 +81,7 @@ const Write = () => {
         console.log(url);
        console.log(newPost);
         try {
-            const res = await axios.post('https://algo-backend.herokuapp.com/api/posts', newPost);
+            const res = await axios.post('https://algoders-backend.vercel.app/api/posts', newPost);
             window.location.replace('/post/' + res.data._id);
             
         } catch (error) {

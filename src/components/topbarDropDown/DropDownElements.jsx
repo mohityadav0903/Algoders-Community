@@ -9,7 +9,7 @@ const DropDownElements = () => {
 
   const getCats = async () => {
     const response = await axios.get(
-      "https://algo-backend.herokuapp.com/api/categories"
+      "https://algoders-backend.vercel.app/api/categories"
     );
     console.log(response);
     setCats(response.data);

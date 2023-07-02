@@ -13,7 +13,7 @@ const Posts = () => {
 
   const fetchPosts = async () => {
     const response = await axios.get(
-      "https://algo-backend.herokuapp.com/api/posts" + search
+      "https://algoders-backend.vercel.app/api/posts" + search
     );
     console.log(response);
     setPosts(response.data);

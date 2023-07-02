@@ -17,7 +17,7 @@ const SinglePost = () => {
     const [desc, setDesc] = useState('');
     const [updateMode, setUpdateMode] = useState(false);
     const getPost = async () => {
-        const response = await axios.get(`https://algo-backend.herokuapp.com/api/posts/${path}`);
+        const response = await axios.get(`https://algoders-backend.vercel.app/api/posts/${path}`);
         console.log(response);
         setPost(response.data);
         setTitle(response.data.title);
@@ -30,14 +30,14 @@ const SinglePost = () => {
   
   const handleDelete = async () => {
      try {
-            await axios.delete(`https://algo-backend.herokuapp.com/api/posts/` + path,{data:{ username: user.username }} );
+            await axios.delete(`https://algoders-backend.vercel.app/api/posts/` + path,{data:{ username: user.username }} );
             window.location.replace('/');
         } catch (error) {
         }
     }
     const handleUpdate = async () => {
         try {
-            await axios.put(`https://algo-backend.herokuapp.com/api/posts/` + path,{ username: user.username,title,desc });
+            await axios.put(`https://algoders-backend.vercel.app/api/posts/` + path,{ username: user.username,title,desc });
             setUpdateMode(false);
         } catch (error) {
         }
